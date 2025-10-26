@@ -1,0 +1,52 @@
+---
+const {
+  title = "TODO",
+  description = "TODO",
+  canonical = "/es/",
+  alternateEn = "/",
+  translationStatus = "placeholder",
+  lastReviewed = "",
+  legalSensitivity = false,
+  disclaimer = ""
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" href={alternateEn} hreflang="en" />
+    <link rel="alternate" href={canonical} hreflang="es" />
+    <link rel="alternate" href={alternateEn} hreflang="x-default" />
+
+    <script
+      type="application/json"
+      id="page-metadata"
+      set:html={JSON.stringify({
+        translationStatus,
+        lastReviewed,
+        legalSensitivity,
+        disclaimer
+      })}
+    />
+  </head>
+
+  <body>
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <!-- language switcher requirement -->
+      <nav>
+        <a href={alternateEn}>English</a>
+        <a href={canonical}>Español</a>
+      </nav>
+    </footer>
+  </body>
+</html>

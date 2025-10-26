@@ -1,22 +1,24 @@
 ---
-// GeoVerity 2026 - Index Page (Placeholder for Phase 1)
-const title = "GeoVerity 2026";
-const description = "Phase 1 Scaffold - Static-First Architecture";
+import BasePageEn from "@/../src/layouts/BasePageEn.astro";
+
+const pageMeta = {
+  title: "GeoVerity 2026",
+  description: "Phase 1-3 Scaffold - Static-First Architecture",
+  canonical: "/",
+  alternateEs: "/es/",
+  translationStatus: "placeholder",
+  lastReviewed: "",
+  legalSensitivity: false,
+  disclaimer: ""
+};
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title}</title>
-  <meta name="description" content={description}>
-</head>
-<body>
-  <h1>{title}</h1>
-  <p>{description}</p>
-  <p>Astro static-first layer operational.</p>
-  <p>React islands restricted to src/apps/*</p>
-  <p>TypeScript strict mode enabled.</p>
-</body>
-</html>
+<BasePageEn {...pageMeta}>
+  <section>
+    <h1>GeoVerity 2026</h1>
+    <p>Phase 1-3 Scaffold - Static-First Architecture</p>
+    <p>Astro static-first layer operational.</p>
+    <p>React islands restricted to src/apps/*</p>
+    <p>TypeScript strict mode enabled.</p>
+  </section>
+</BasePageEn>
