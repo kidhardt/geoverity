@@ -1,43 +1,92 @@
-name: Repo Protection (Placeholder)
+name: GeoVerity 2026 – Repo Protection & Validation
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "master" ]
 
 jobs:
   type-check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm ci
       - name: TypeScript strict mode
-        run: npm run type-check || exit 1
+        run: npm run type-check
+
+  beads-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm ci
+      - name: Validate beads database
+        run: npm run beads:validate
 
   localization-validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build site
+        run: npm run build
       - name: Localization Parity Check
-        run: node scripts/validate-localization.js || exit 1
+        run: node scripts/validate_localization.js
 
   accessibility-scan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build site
+        run: npm run build
       - name: Accessibility Scan
-        run: echo "TODO: integrate axe-core/lighthouse accessibility validation" && exit 0
+        run: node scripts/accessibility_scan.js
+
+  governance-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm ci
+      - name: Data Governance Scan
+        run: node scripts/data_governance_scan.js
 
   lighthouse-mobile:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Lighthouse
+        run: npm install -g lighthouse
+      - name: Build site
+        run: npm run build
+      - name: Start preview server
+        run: npm run preview &
+      - name: Wait for server
+        run: npx wait-on http://localhost:4321
       - name: Lighthouse Mobile Performance
-        run: echo "TODO: enforce Lighthouse mobile score >=90" && exit 0
-
-  parity-check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: EN/ES Parity Verification
-        run: echo "TODO: confirm English and Spanish page parity + metadata" && exit 0
+        run: bash scripts/lighthouse_ci.sh

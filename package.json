@@ -17,7 +17,14 @@
     "beads:sync": "bd sync",
     "beads:info": "bd info --json",
     "hooks:install": "bash scripts/install-git-hooks.sh",
-    "postinstall": "npm run hooks:install"
+    "postinstall": "npm run hooks:install",
+    "validate:localization": "node scripts/validate_localization.js",
+    "validate:accessibility": "node scripts/accessibility_scan.js",
+    "validate:governance": "node scripts/data_governance_scan.js",
+    "validate:all": "npm run validate:localization && npm run validate:accessibility && npm run validate:governance",
+    "generate:sitemap": "node scripts/generate_sitemap.js",
+    "generate:categories": "node scripts/generate_categories.js",
+    "generate:all": "npm run generate:sitemap && npm run generate:categories"
   },
   "repository": {
     "type": "git",
@@ -26,7 +33,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/kidhardt/geoverity/issues"
   },
