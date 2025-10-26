@@ -1,0 +1,20 @@
+
+FullName                                                 Length LastWriteTime        
+--------                                                 ------ -------------        
+M:\VS GeoVerity\geoverity\dist\es                               10/26/2025 3:46:51 PM
+M:\VS GeoVerity\geoverity\dist\placeholder                      10/26/2025 3:46:51 PM
+M:\VS GeoVerity\geoverity\dist\_astro                           10/26/2025 3:46:51 PM
+M:\VS GeoVerity\geoverity\dist\index.html                969    10/26/2025 3:46:51 PM
+M:\VS GeoVerity\geoverity\dist\README.md                 16     10/26/2025 1:40:00 PM
+M:\VS GeoVerity\geoverity\dist\sitemap.xml               110    10/26/2025 3:29:46 PM
+M:\VS GeoVerity\geoverity\dist\es\placeholder                   10/26/2025 3:46:51 PM
+M:\VS GeoVerity\geoverity\dist\es\index.html             991    10/26/2025 3:46:51 PM
+M:\VS GeoVerity\geoverity\dist\es\README.md              19     10/26/2025 1:40:00 PM
+M:\VS GeoVerity\geoverity\dist\es\sitemap.xml            110    10/26/2025 3:29:46 PM
+M:\VS GeoVerity\geoverity\dist\es\placeholder\index.html 6411   10/26/2025 3:46:51 PM
+M:\VS GeoVerity\geoverity\dist\placeholder\index.html    6392   10/26/2025 3:46:51 PM
+M:\VS GeoVerity\geoverity\dist\_astro\client.Bx7k8SOM.js 194632 10/26/2025 3:46:51 PM
+M:\VS GeoVerity\geoverity\dist\_astro\Island.BZ3tz7Uw.js 1850   10/26/2025 3:46:51 PM
+
+
+
