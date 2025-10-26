@@ -1,5 +1,6 @@
 ---
 import BasePageEs from "@/../src/layouts/BasePageEs.astro";
+import { ResearchIntegrityIsland } from "@/apps/research-integrity/Island";
 
 const pageMeta = {
   title: "Página Placeholder (ES)",
@@ -17,5 +18,16 @@ const pageMeta = {
   <section>
     <h1>Página de Andamiaje (Español)</h1>
     <p>Esta página solo demuestra paridad EN/ES, metadatos obligatorios y validadores. No es contenido de producción.</p>
+  </section>
+
+  <section>
+    <h2>Vista Interactiva (Español)</h2>
+    <p>Aquí se montará un módulo de integridad de investigación sensible.</p>
+
+    <!-- React island mount (Español) -->
+    <div>
+      <!-- @astrojs/react rendering -->
+      <ResearchIntegrityIsland client:idle lang="es" />
+    </div>
   </section>
 </BasePageEs>
