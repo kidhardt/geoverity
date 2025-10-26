@@ -1,0 +1,43 @@
+name: Repo Protection (Placeholder)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  type-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: TypeScript strict mode
+        run: npm run type-check || exit 1
+
+  localization-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Localization Parity Check
+        run: node scripts/validate-localization.js || exit 1
+
+  accessibility-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Accessibility Scan
+        run: echo "TODO: integrate axe-core/lighthouse accessibility validation" && exit 0
+
+  lighthouse-mobile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lighthouse Mobile Performance
+        run: echo "TODO: enforce Lighthouse mobile score >=90" && exit 0
+
+  parity-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: EN/ES Parity Verification
+        run: echo "TODO: confirm English and Spanish page parity + metadata" && exit 0

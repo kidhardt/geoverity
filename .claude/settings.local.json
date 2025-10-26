@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --version:*)",
+      "Bash(npm:*)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash([ ! -f package.json ])",
+      "Bash(curl:*)",
+      "Bash(bash)",
+      "Bash(powershell -Command \"irm https://raw.githubusercontent.com/steveyegge/beads/main/install.ps1 | iex\")",
+      "Bash(bd init:*)",
+      "Bash(bd info:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(git add:*)",
+      "Bash(tree:*)",
+      "Bash(for dir in public public/es src src/apps src/data/structured src/data/unstructured src/i18n scripts scripts/beads docs .claude .beads)",
+      "Bash(do )",
+      "Bash(if [ -d \"$dir\" ])",
+      "Bash(then )",
+      "Bash(if [ -f \"$dir/README.md\" ])",
+      "Bash(echo:*)",
+      "Bash(else )",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(npx tsc:*)",
+      "Bash(node scripts/beads/validate.js:*)",
+      "Bash(cat:*)",
+      "Bash(bd create:*)",
+      "Bash(bd list:*)",
+      "Bash(bd sync:*)",
+      "Bash(node scripts/validate-localization.js:*)",
+      "Bash(node scripts/generate_page_json.js:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

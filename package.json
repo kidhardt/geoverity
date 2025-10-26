@@ -1,0 +1,53 @@
+{
+  "name": "geoverity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "astro:dev": "astro dev",
+    "astro:build": "astro build",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint . --ext ts,tsx --max-warnings 0",
+    "beads:capture": "tsx scripts/beads-capture.ts",
+    "beads:validate": "tsx scripts/validate-beads.ts",
+    "beads:list": "bd list --json",
+    "beads:ready": "bd ready --json",
+    "beads:sync": "bd sync",
+    "beads:info": "bd info --json",
+    "hooks:install": "bash scripts/install-git-hooks.sh",
+    "postinstall": "npm run hooks:install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kidhardt/geoverity.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kidhardt/geoverity/issues"
+  },
+  "homepage": "https://github.com/kidhardt/geoverity#readme",
+  "dependencies": {
+    "@astrojs/react": "^4.4.0",
+    "astro": "^5.15.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.1.0",
+    "eslint": "^9.38.0",
+    "prettier": "^3.6.2",
+    "rollup-plugin-visualizer": "^6.0.5",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12"
+  }
+}

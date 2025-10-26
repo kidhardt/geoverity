@@ -1,0 +1,10 @@
+{
+  "protectedAreas": [
+    "docs/",
+    ".claude/",
+    "scripts/",
+    "src/i18n/",
+    "src/layouts/"
+  ],
+  "notes": "Protected directories contain localization, accessibility, and governance logic. All changes require review."
+}

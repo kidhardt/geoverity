@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+.astro/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Beads - Official CLI (https://github.com/steveyegge/beads)
+# Ignore local database cache and runtime files
+.beads/*.db
+.beads/*.db-journal
+.beads/*.db-wal
+.beads/*.db-shm
+.beads/bd.sock
+.beads/daemon.lock
+.beads/daemon.log
+.beads/*.pid
+
+# Keep beads source of truth files (committed to git)
+!.beads/issues.jsonl
+!.beads/.gitignore
+!.beads/README.md
