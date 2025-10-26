@@ -1,6 +1,9 @@
 ---
 import BasePageEs from "@/../src/layouts/BasePageEs.astro";
 import { ResearchIntegrityIsland } from "@/apps/research-integrity/Island";
+import { getHigherEdSurface } from "@/data/loaders";
+
+const surface = getHigherEdSurface("es");
 
 const pageMeta = {
   title: "Página Placeholder (ES)",
@@ -16,8 +19,14 @@ const pageMeta = {
 
 <BasePageEs {...pageMeta}>
   <section>
-    <h1>Página de Andamiaje (Español)</h1>
-    <p>Esta página solo demuestra paridad EN/ES, metadatos obligatorios y validadores. No es contenido de producción.</p>
+    <h1>{surface.title}</h1>
+    <p>{surface.summary}</p>
+
+    <aside style="font-size:0.8rem;opacity:0.7;">
+      <p><strong>Última Revisión:</strong> {surface.lastReviewed || "TBD"}</p>
+      <p><strong>Estado:</strong> {surface.translationStatus}</p>
+      <p><strong>Aviso:</strong> {surface.disclaimer}</p>
+    </aside>
   </section>
 
   <section>

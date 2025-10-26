@@ -1,27 +1,30 @@
-import { readFileSync } from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
 import type { Pillar } from "./structured/models";
 import { pillarsSample } from "./structured/pillars.sample";
-
-// __dirname polyfill for ESM/TS
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-function loadJSON(relPath: string) {
-  const full = path.join(__dirname, relPath);
-  const raw = readFileSync(full, "utf8");
-  return JSON.parse(raw);
-}
+import consultingHigherEdEn from "./unstructured/consultingHigherEd.en.json";
+import consultingHigherEdEs from "./unstructured/consultingHigherEd.es.json";
 
 // Load placeholder narrative blocks for Higher Education Consulting
 export function getHigherEdContent() {
-  const en = loadJSON("../data/unstructured/consultingHigherEd.en.json");
-  const es = loadJSON("../data/unstructured/consultingHigherEd.es.json");
-  return { en, es };
+  return {
+    en: consultingHigherEdEn,
+    es: consultingHigherEdEs
+  };
 }
 
 // Load placeholder pillar definitions (structured, bilingual)
 export function getPillarsSample(): Pillar[] {
   return pillarsSample;
+}
+
+export function getHigherEdSurface(lang: "en" | "es") {
+  const { en, es } = getHigherEdContent();
+  const chosen = lang === "en" ? en : es;
+  return {
+    title: chosen.title,
+    summary: chosen.summary,
+    lastReviewed: chosen.lastReviewed,
+    translationStatus: chosen.translationStatus,
+    legalSensitivity: chosen.legalSensitivity,
+    disclaimer: chosen.disclaimer
+  };
 }
