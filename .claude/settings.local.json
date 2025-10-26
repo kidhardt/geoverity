@@ -30,7 +30,10 @@
       "Bash(bd list:*)",
       "Bash(bd sync:*)",
       "Bash(node scripts/validate-localization.js:*)",
-      "Bash(node scripts/generate_page_json.js:*)"
+      "Bash(node scripts/generate_page_json.js:*)",
+      "Bash(git commit:*)",
+      "Bash(npx astro info)",
+      "Bash(npx astro check:*)"
     ],
     "deny": [],
     "ask": []

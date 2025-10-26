@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "astro:dev": "astro dev",
-    "astro:build": "astro build",
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "dev": "astro dev",
+    "build": "tsc && astro build",
+    "preview": "astro preview",
+    "astro:check": "astro check",
     "type-check": "tsc --noEmit",
     "lint": "eslint . --ext ts,tsx --max-warnings 0",
     "beads:capture": "tsx scripts/beads-capture.ts",
@@ -39,6 +38,7 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.5",
     "@types/node": "^24.9.1",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",

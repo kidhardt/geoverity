@@ -15,7 +15,6 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      input: {},
       output: {
         manualChunks: {
           "react-vendor": ["react", "react-dom"]
