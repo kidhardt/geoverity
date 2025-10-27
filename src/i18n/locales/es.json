@@ -31,6 +31,28 @@
     "categories": "Categorías",
     "allPosts": "Todas las Publicaciones"
   },
+  "insightsPosts": {
+    "trustCurrency": {
+      "title": "Por Qué la Confianza es la Nueva Moneda Académica",
+      "slug": "por-que-confianza-nueva-moneda-academica",
+      "excerpt": "Las universidades enfrentan una crisis de credibilidad. Los programas de posgrado necesitan marcos que demuestren confiabilidad a estudiantes potenciales y donantes.",
+      "content": "Las universidades que compiten por inscripción y financiamiento ahora se diferencian a través de credenciales de confianza. Los programas de posgrado que documentan marcos rigurosos de integridad académica atraen estudiantes preocupados por el valor de las credenciales. Los administradores posicionan las políticas de integridad como ventajas competitivas en lugar de cargas de cumplimiento. Las instituciones que construyen verificación sistemática de confianza obtienen ventaja en mercados donde la reputación determina la viabilidad. Los profesores que entienden este cambio abogan por inversiones en integridad que fortalezcan el posicionamiento institucional.",
+      "category": "integridad-academica",
+      "readMoreLink": "/es/consultoria-educacion-superior/confianza-como-moneda/",
+      "readMoreText": "Aprende cómo posicionar la confianza como moneda institucional",
+      "ctaText": "Programa una consulta para discutir tu marco de confianza"
+    },
+    "authorizedLLMs": {
+      "title": "LLM Autorizados en Educación de Posgrado",
+      "slug": "llm-autorizados-educacion-posgrado",
+      "excerpt": "Los estudiantes de posgrado necesitan herramientas de IA que cumplan con las regulaciones de protección de datos mientras apoyan actividades de investigación legítimas.",
+      "content": "Los departamentos implementan modelos de lenguaje aprobados dentro de los límites institucionales para mantener el cumplimiento de FERPA y GDPR. Los estudiantes acceden a herramientas de IA sin exponer datos de tesis o hallazgos de investigación a proveedores externos. Los profesores obtienen supervisión de los patrones de uso de herramientas de IA sin depender de software de detección. Las universidades controlan qué modelos operan en redes del campus y cómo fluyen los datos de estudiantes a través de los sistemas. Las implementaciones de LLM autorizados resuelven la tensión entre la adopción de IA y la protección de privacidad.",
+      "category": "integridad-academica",
+      "readMoreLink": "/es/consultoria-educacion-superior/llm-departamentales-autorizados/",
+      "readMoreText": "Explora opciones de implementación de LLM autorizados",
+      "ctaText": "Contáctanos sobre herramientas de IA departamentales seguras"
+    }
+  },
   "insightsCategories": {
     "academicIntegrity": {
       "name": "Integridad Académica",

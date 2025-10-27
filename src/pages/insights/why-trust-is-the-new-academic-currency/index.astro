@@ -1,0 +1,15 @@
+---
+import BasePageEn from "@/layouts/BasePageEn.astro";
+import { t } from '@/i18n';
+const lang = 'en';
+const post = t(lang, 'insightsPosts.trustCurrency');
+const pageMeta = { title: `${post.title} - Insights - GeoVerity`, description: post.excerpt, translationStatus: "approved", lastReviewed: new Date().toISOString() };
+---
+<BasePageEn {...pageMeta}>
+<article class="post">
+<header class="post-header"><h1>{post.title}</h1><p class="post-meta">Category: <a href={`/insights/category/${post.category}/`}>{t(lang, `insightsCategories.${post.category.replace(/-/g, '')}.name`)}</a></p></header>
+<section class="post-content"><p class="excerpt">{post.excerpt}</p><p>{post.content}</p></section>
+<aside class="post-cta"><p><a href={post.readMoreLink} class="read-more-link">{post.readMoreText}</a></p><p class="cta-text">{post.ctaText}</p><a href="/contact/" class="cta-button">Contact Us</a></aside>
+</article>
+</BasePageEn>
+<style>article.post{max-width:var(--content-width,70ch);margin-inline:auto;padding:var(--space-lg) var(--space-md)}.post-header{margin-bottom:var(--space-lg);border-bottom:2px solid var(--color-border);padding-bottom:var(--space-md)}.post-header h1{font-size:var(--font-size-xxxl);margin-bottom:var(--space-sm)}.post-meta{color:var(--color-text-muted);font-size:var(--font-size-sm)}.post-meta a{color:var(--color-link);text-decoration:underline}.post-content{margin-bottom:var(--space-xl);line-height:1.7}.post-content .excerpt{font-size:var(--font-size-lg);font-weight:600;margin-bottom:var(--space-md)}.post-content p{margin-bottom:var(--space-md)}.post-cta{background:var(--color-bg-subtle);padding:var(--space-lg);border-radius:var(--radius-md);text-align:center}.read-more-link{color:var(--color-link);text-decoration:underline;font-weight:600}.cta-text{margin:var(--space-md) 0;font-size:var(--font-size-md)}.cta-button{display:inline-block;padding:var(--space-sm) var(--space-lg);background:var(--color-primary);color:var(--color-bg);text-decoration:none;border-radius:var(--radius-sm);font-weight:600;min-height:44px;min-width:44px}</style>

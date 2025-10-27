@@ -31,6 +31,28 @@
     "categories": "Categories",
     "allPosts": "All Posts"
   },
+  "insightsPosts": {
+    "trustCurrency": {
+      "title": "Why Trust is the New Academic Currency",
+      "slug": "why-trust-is-the-new-academic-currency",
+      "excerpt": "Universities face a credibility crisis. Graduate programs need frameworks that demonstrate trustworthiness to prospective students and donors.",
+      "content": "Universities competing for enrollment and funding now differentiate themselves through trust credentials. Graduate programs that document rigorous academic integrity frameworks attract students concerned about credential value. Administrators position integrity policies as competitive advantages rather than compliance burdens. Institutions that build systematic trust verification gain leverage in markets where reputation determines viability. Faculty who understand this shift advocate for integrity investments that strengthen institutional positioning.",
+      "category": "academic-integrity",
+      "readMoreLink": "/higher-education-consulting/trust-as-currency/",
+      "readMoreText": "Learn how to position trust as institutional currency",
+      "ctaText": "Schedule a consultation to discuss your trust framework"
+    },
+    "authorizedLLMs": {
+      "title": "Authorized LLMs in Graduate Education",
+      "slug": "authorized-llms-graduate-education",
+      "excerpt": "Graduate students need AI tools that comply with data protection regulations while supporting legitimate research activities.",
+      "content": "Departments deploy approved language models within institutional boundaries to maintain FERPA and GDPR compliance. Students access AI tools without exposing thesis data or research findings to external vendors. Faculty gain oversight of AI tool usage patterns without relying on detection software. Universities control which models operate on campus networks and how student data flows through systems. Authorized LLM deployments resolve tension between AI adoption and privacy protection.",
+      "category": "academic-integrity",
+      "readMoreLink": "/higher-education-consulting/authorized-departmental-llms/",
+      "readMoreText": "Explore authorized LLM deployment options",
+      "ctaText": "Contact us about secure departmental AI tools"
+    }
+  },
   "insightsCategories": {
     "academicIntegrity": {
       "name": "Academic Integrity",
