@@ -24,6 +24,13 @@
     "missionHeading": "Our Mission",
     "missionText": "We partner with universities to build academic integrity frameworks. Faculty learn to assess student work in AI environments. Institutions maintain standards while adopting AI responsibly."
   },
+  "insightsHub": {
+    "heroHeading": "Insights",
+    "heroSubheading": "Exploring graduate education, epistemic responsibility, and AI use in academia.",
+    "noPosts": "No posts available yet. Check back soon.",
+    "categories": "Categories",
+    "allPosts": "All Posts"
+  },
   "footer": {
     "copyright": "© 2026 GeoVerity. All rights reserved."
   }

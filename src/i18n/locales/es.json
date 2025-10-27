@@ -24,6 +24,13 @@
     "missionHeading": "Nuestra Misión",
     "missionText": "Nos asociamos con universidades para construir marcos de integridad académica. Los profesores aprenden a evaluar el trabajo estudiantil en entornos de IA. Las instituciones mantienen estándares mientras adoptan IA de manera responsable."
   },
+  "insightsHub": {
+    "heroHeading": "Perspectivas",
+    "heroSubheading": "Explorando educación de posgrado, responsabilidad epistémica y uso de IA en el ámbito académico.",
+    "noPosts": "Aún no hay publicaciones disponibles. Vuelve pronto.",
+    "categories": "Categorías",
+    "allPosts": "Todas las Publicaciones"
+  },
   "footer": {
     "copyright": "© 2026 GeoVerity. Todos los derechos reservados."
   }

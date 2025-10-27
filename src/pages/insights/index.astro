@@ -1,0 +1,112 @@
+---
+import BasePageEn from "@/layouts/BasePageEn.astro";
+import { t } from '@/i18n';
+
+const lang = 'en';
+const pageMeta = {
+  title: "Insights - GeoVerity",
+  description: "Exploring graduate education, epistemic responsibility, and AI use in academia.",
+  translationStatus: "approved",
+  lastReviewed: new Date().toISOString()
+};
+
+// TODO: When implementing blog functionality, fetch posts here
+// const posts = await getCollection('insights');
+const posts: any[] = [];
+---
+
+<BasePageEn {...pageMeta}>
+  <section class="insights-hero" aria-labelledby="insights-heading">
+    <h1 id="insights-heading">{t(lang, 'insightsHub.heroHeading')}</h1>
+    <p>{t(lang, 'insightsHub.heroSubheading')}</p>
+  </section>
+
+  <section class="insights-content" aria-labelledby="posts-heading">
+    <h2 id="posts-heading" class="sr-only">{t(lang, 'insightsHub.allPosts')}</h2>
+
+    {posts.length === 0 ? (
+      <p class="no-posts">{t(lang, 'insightsHub.noPosts')}</p>
+    ) : (
+      <ul class="posts-list" role="list">
+        {posts.map((post: any) => (
+          <li>
+            <article aria-labelledby={`post-${post.slug}`}>
+              <h3 id={`post-${post.slug}`}>
+                <a href={`/insights/${post.slug}/`}>{post.data.title}</a>
+              </h3>
+              <p>{post.data.description}</p>
+            </article>
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+</BasePageEn>
+
+<style>
+  .insights-hero {
+    padding: var(--space-lg) var(--space-md);
+    text-align: center;
+  }
+
+  .insights-hero h1 {
+    font-size: var(--font-size-xxxl);
+    margin-bottom: var(--space-sm);
+  }
+
+  .insights-hero p {
+    font-size: var(--font-size-lg);
+    max-width: 60ch;
+    margin-inline: auto;
+  }
+
+  .insights-content {
+    padding: var(--space-lg) var(--space-md);
+    max-width: var(--content-width);
+    margin-inline: auto;
+  }
+
+  .no-posts {
+    text-align: center;
+    color: var(--color-text-secondary);
+    padding: var(--space-xl);
+  }
+
+  .posts-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-lg);
+  }
+
+  .posts-list article {
+    padding: var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+  }
+
+  .posts-list h3 {
+    margin-bottom: var(--space-xs);
+  }
+
+  .posts-list a {
+    text-decoration: none;
+    color: var(--color-primary);
+  }
+
+  .posts-list a:hover {
+    text-decoration: underline;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+</style>
