@@ -31,6 +31,28 @@
     "categories": "Categorías",
     "allPosts": "Todas las Publicaciones"
   },
+  "higherEd": {
+    "heroHeading": "Consultoría para Educación Superior",
+    "heroSubheading": "Ayudamos a las universidades a mantener la integridad académica en la era de la IA. Construimos políticas que funcionan sin iniciar una carrera armamentista de detección.",
+    "problemHeading": "El Problema",
+    "problemPara1": "Los programas de posgrado enfrentan una pérdida de confianza en el trabajo estudiantil. Los profesores no pueden determinar qué trabajos involucran autoría con IA. Las herramientas de detección generan acusaciones falsas. Los administradores se preocupan por los estándares de acreditación mientras los estudiantes demandan acceso a herramientas de IA.",
+    "problemPara2": "Los códigos de honor tradicionales asumen que los estudiantes escriben todo ellos mismos. Ese modelo falla cuando la IA puede redactar documentos completos. Las instituciones necesitan marcos que reconozcan el uso de IA sin abandonar los estándares de integridad.",
+    "approachHeading": "Nuestro Enfoque",
+    "approachPara1": "Trabajamos con universidades para construir marcos de integridad académica para entornos con IA. Los profesores aprenden a evaluar el trabajo estudiantil cuando se involucran herramientas de IA. Las instituciones mantienen estándares mientras adoptan la IA de manera responsable.",
+    "approachPara2": "Nuestras consultorías combinan desarrollo de políticas, capacitación docente y apoyo en implementación. Comenzamos entendiendo su contexto institucional y requisitos de acreditación. Luego diseñamos marcos que se ajustan a su estructura de gobernanza.",
+    "offeringsHeading": "Qué Ofrecemos",
+    "policyDevHeading": "Desarrollo de Políticas",
+    "policyDevText": "Redactamos políticas de uso de IA adaptadas a los requisitos de su programa. Las políticas especifican cuándo se permiten herramientas de IA, qué deben revelar los estudiantes y cómo los profesores verifican los resultados de aprendizaje.",
+    "facultyTrainingHeading": "Capacitación Docente",
+    "facultyTrainingText": "Capacitamos a los profesores para evaluar el trabajo estudiantil en entornos con IA. La capacitación cubre las limitaciones de la detección de IA, métodos de evaluación basados en procesos y cómo actualizar el diseño de tareas.",
+    "implementationHeading": "Apoyo en Implementación",
+    "implementationText": "Le ayudamos a implementar nuevas políticas en todos los departamentos. El apoyo incluye planes de comunicación, programas piloto y ciclos de retroalimentación para refinar su enfoque.",
+    "accreditationHeading": "Cumplimiento de Acreditación",
+    "accreditationText": "Aseguramos que sus políticas de IA cumplan con los estándares de acreditación. Documentamos cómo sus marcos de integridad mantienen el rigor académico y verifican el aprendizaje estudiantil.",
+    "whyMattersHeading": "Por Qué Esto Importa",
+    "whyMattersPara1": "Las instituciones mantienen la acreditación mientras se adaptan a las realidades de la IA. Los profesores ganan confianza al evaluar el trabajo estudiantil. Los estudiantes entienden las expectativas claramente. Sus políticas reducen el conflicto en lugar de aumentar la vigilancia.",
+    "whyMattersPara2": "Los enfoques basados solo en detección fallan y dañan la confianza. Nuestros marcos reconocen el uso de IA mientras preservan lo que importa: verificar que los estudiantes aprendan el material."
+  },
   "footer": {
     "copyright": "© 2026 GeoVerity. Todos los derechos reservados."
   }

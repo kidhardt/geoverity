@@ -31,6 +31,28 @@
     "categories": "Categories",
     "allPosts": "All Posts"
   },
+  "higherEd": {
+    "heroHeading": "Higher Education Consulting",
+    "heroSubheading": "We help universities maintain academic integrity in the AI era. Build policies that work without starting an arms race around detection.",
+    "problemHeading": "The Problem",
+    "problemPara1": "Graduate programs face declining trust in student work. Faculty cannot tell which submissions involve AI authorship. Detection tools generate false accusations. Administrators worry about accreditation standards while students demand access to AI tools.",
+    "problemPara2": "Traditional honor codes assume students write everything themselves. That model breaks when AI can draft entire papers. Institutions need frameworks that acknowledge AI use without abandoning integrity standards.",
+    "approachHeading": "Our Approach",
+    "approachPara1": "We partner with universities to build academic integrity frameworks for AI environments. Faculty learn to assess student work when AI tools are involved. Institutions maintain standards while adopting AI responsibly.",
+    "approachPara2": "Our consulting engagements combine policy development, faculty training, and implementation support. We start by understanding your institutional context and accreditation requirements. Then we design frameworks that fit your governance structure.",
+    "offeringsHeading": "What We Offer",
+    "policyDevHeading": "Policy Development",
+    "policyDevText": "We draft AI use policies tailored to your program requirements. Policies specify when AI tools are permitted, what students must disclose, and how faculty verify learning outcomes.",
+    "facultyTrainingHeading": "Faculty Training",
+    "facultyTrainingText": "We train faculty to assess student work in AI environments. Training covers AI detection limitations, process-based assessment methods, and how to update assignment design.",
+    "implementationHeading": "Implementation Support",
+    "implementationText": "We help you roll out new policies across departments. Support includes communication plans, pilot programs, and feedback loops to refine your approach.",
+    "accreditationHeading": "Accreditation Compliance",
+    "accreditationText": "We ensure your AI policies meet accreditation standards. We document how your integrity frameworks maintain academic rigor and verify student learning.",
+    "whyMattersHeading": "Why This Matters",
+    "whyMattersPara1": "Institutions maintain accreditation while adapting to AI realities. Faculty gain confidence assessing student work. Students understand expectations clearly. Your policies reduce conflict instead of increasing surveillance.",
+    "whyMattersPara2": "Detection-only approaches fail and damage trust. Our frameworks acknowledge AI use while preserving what matters: verifying that students learn the material."
+  },
   "footer": {
     "copyright": "© 2026 GeoVerity. All rights reserved."
   }
