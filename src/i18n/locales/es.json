@@ -122,6 +122,43 @@
     "trainingHeading": "Capacitación en Gobernanza",
     "trainingText": "Capacitamos equipos en políticas y herramientas de gobernanza de IA. El personal entiende sus responsabilidades y cómo cumplir."
   },
+  "higherEdSpokes": {
+    "gradStudentIntegrity": {
+      "heroHeading": "Integridad de Estudiantes de Posgrado en Entornos de IA",
+      "heroSubheading": "Ayuda a los estudiantes de posgrado a mantener la integridad mientras usan herramientas de IA de manera responsable.",
+      "contentPara": "Los estudiantes de posgrado enfrentan presión para usar herramientas de IA mientras cumplen con estándares de integridad. Capacitamos estudiantes en uso responsable de IA, les ayudamos a documentar sus procesos de trabajo y enseñamos a la facultad a evaluar resultados de aprendizaje cuando las herramientas de IA están involucradas. Los estudiantes aprenden a usar IA como ayuda de investigación sin comprometer su desarrollo intelectual."
+    },
+    "authorizedLLMs": {
+      "heroHeading": "LLM Departamentales Autorizados",
+      "heroSubheading": "Implementa modelos de IA seguros aprobados por el departamento que protegen los datos de los estudiantes y cumplen con los estándares de cumplimiento.",
+      "contentPara": "Los departamentos necesitan herramientas de IA seguras que cumplan con los requisitos de FERPA y GDPR. Te ayudamos a implementar modelos de lenguaje aprobados dentro de los límites institucionales. Los estudiantes acceden a herramientas de IA sin exponer datos sensibles a terceros. Tu institución mantiene el control sobre el uso de IA mientras protege la privacidad."
+    },
+    "facultyLiteracy": {
+      "heroHeading": "Programas de Alfabetización en IA para Facultad",
+      "heroSubheading": "Capacita a la facultad para evaluar el trabajo estudiantil de manera efectiva en entornos de IA.",
+      "contentPara": "La facultad necesita habilidades para evaluar el trabajo estudiantil cuando las herramientas de IA están involucradas. Proporcionamos capacitación sobre las limitaciones de detección de IA, métodos de evaluación basados en procesos y actualizaciones de diseño de tareas. La facultad gana confianza evaluando el trabajo y ayudando a los estudiantes a usar IA de manera responsable. La capacitación se alinea con tus políticas institucionales y requisitos de acreditación."
+    },
+    "trustCharter": {
+      "heroHeading": "Carta de Confianza del Campus",
+      "heroSubheading": "Construye marcos de integridad a nivel de campus que funcionen en todos los departamentos.",
+      "contentPara": "Las instituciones necesitan estándares de integridad consistentes en todos los programas. Te ayudamos a desarrollar cartas de confianza a nivel de campus que se alineen con los requisitos de acreditación. Los rectores obtienen marcos que funcionan en todos los departamentos. Tu carta proporciona expectativas claras para estudiantes y facultad mientras cumple con los estándares institucionales."
+    },
+    "trustCurrency": {
+      "heroHeading": "La Confianza como Moneda Institucional",
+      "heroSubheading": "Posiciona la integridad académica como una ventaja competitiva para la inscripción y el financiamiento.",
+      "contentPara": "La confianza se convierte en un activo de reclutamiento y recaudación de fondos. Ayudamos al liderazgo a comunicar marcos de integridad a estudiantes potenciales y donantes. Tu institución demuestra compromiso con los estándares académicos mientras adopta IA de manera responsable. Las credenciales de confianza diferencian tus programas en mercados competitivos."
+    },
+    "ethicsCurriculum": {
+      "heroHeading": "Desarrollo de Currículo de Ética de IA",
+      "heroSubheading": "Integra ética de IA en programas de posgrado con módulos de revisión crítica.",
+      "contentPara": "Los programas de posgrado necesitan contenido de ética de IA que se ajuste a sus disciplinas. Diseñamos módulos curriculares sobre uso responsable de IA, evaluación crítica de resultados de IA y consideraciones éticas. La facultad integra ética en cursos existentes o construye módulos independientes. Los estudiantes desarrollan habilidades de pensamiento crítico sobre herramientas de IA."
+    },
+    "researchTools": {
+      "heroHeading": "Herramientas de Integridad en Investigación",
+      "heroSubheading": "Herramientas éticas para la transparencia y reproducibilidad en investigación.",
+      "contentPara": "Los investigadores necesitan herramientas para mantener la integridad en el análisis de datos y la presentación de informes. Proporcionamos recursos de integridad en investigación que incluyen calculadoras de valores p y herramientas de detección de sesgo. Las universidades demuestran compromiso con prácticas de investigación transparentes. Las herramientas interactivas ayudan a los investigadores a identificar errores estadísticos comunes antes de la publicación."
+    }
+  },
   "contact": {
     "heroHeading": "Contáctanos",
     "heroSubheading": "Cuéntanos sobre tus necesidades. Responderemos en 24 horas.",

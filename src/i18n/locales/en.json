@@ -122,6 +122,43 @@
     "trainingHeading": "Governance Training",
     "trainingText": "We train teams on AI governance policies and tools. Staff understand their responsibilities and how to comply."
   },
+  "higherEdSpokes": {
+    "gradStudentIntegrity": {
+      "heroHeading": "Graduate Student Integrity in AI Environments",
+      "heroSubheading": "Help graduate students maintain integrity while using AI tools responsibly.",
+      "contentPara": "Graduate students face pressure to use AI tools while meeting integrity standards. We train students on responsible AI use, help them document their work processes, and teach faculty to assess learning outcomes when AI tools are involved. Students learn to use AI as a research aid without compromising their intellectual development."
+    },
+    "authorizedLLMs": {
+      "heroHeading": "Authorized Departmental LLMs",
+      "heroSubheading": "Deploy secure, department-approved AI models that protect student data and meet compliance standards.",
+      "contentPara": "Departments need secure AI tools that comply with FERPA and GDPR requirements. We help you deploy approved language models within your institutional boundaries. Students access AI tools without exposing sensitive data to third parties. Your institution maintains control over AI use while protecting privacy."
+    },
+    "facultyLiteracy": {
+      "heroHeading": "Faculty AI Literacy Programs",
+      "heroSubheading": "Train faculty to assess student work effectively in AI environments.",
+      "contentPara": "Faculty need skills to evaluate student work when AI tools are involved. We provide training on AI detection limitations, process-based assessment methods, and assignment design updates. Faculty gain confidence assessing work and helping students use AI responsibly. Training aligns with your institutional policies and accreditation requirements."
+    },
+    "trustCharter": {
+      "heroHeading": "Campus Trust Charter",
+      "heroSubheading": "Build campus-wide integrity frameworks that work across departments.",
+      "contentPara": "Institutions need consistent integrity standards across programs. We help you develop campus-wide trust charters that align with accreditation requirements. Provosts gain frameworks that work across departments. Your charter provides clear expectations for students and faculty while meeting institutional standards."
+    },
+    "trustCurrency": {
+      "heroHeading": "Trust as Institutional Currency",
+      "heroSubheading": "Position academic integrity as a competitive advantage for enrollment and funding.",
+      "contentPara": "Trust becomes a recruitment and fundraising asset. We help leadership communicate integrity frameworks to prospective students and donors. Your institution demonstrates commitment to academic standards while adopting AI responsibly. Trust credentials differentiate your programs in competitive markets."
+    },
+    "ethicsCurriculum": {
+      "heroHeading": "AI Ethics Curriculum Development",
+      "heroSubheading": "Integrate AI ethics into graduate programs with critical review modules.",
+      "contentPara": "Graduate programs need AI ethics content that fits their disciplines. We design curriculum modules on responsible AI use, critical evaluation of AI outputs, and ethical considerations. Faculty integrate ethics into existing courses or build standalone modules. Students develop critical thinking skills about AI tools."
+    },
+    "researchTools": {
+      "heroHeading": "Research Integrity Tools",
+      "heroSubheading": "Ethical tooling for research transparency and reproducibility.",
+      "contentPara": "Researchers need tools to maintain integrity in data analysis and reporting. We provide research integrity resources including p-value calculators and bias detection tools. Universities demonstrate commitment to transparent research practices. Interactive tools help researchers identify common statistical errors before publication."
+    }
+  },
   "contact": {
     "heroHeading": "Contact Us",
     "heroSubheading": "Tell us about your needs. We'll respond within 24 hours.",
