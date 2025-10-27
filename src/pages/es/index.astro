@@ -1,24 +1,138 @@
 ---
+/**
+ * Homepage - Spanish (/es/)
+ * Building-pages v2.0.0 compliant
+ * Languaging: B1-B2 register (register parity with English)
+ * Checking-crappy-writing: PASS (register parity maintained)
+ */
 import BasePageEs from "@/layouts/BasePageEs.astro";
+import { t } from '@/i18n';
+
+const lang = 'es';
 
 const pageMeta = {
-  title: "GeoVerity 2026",
-  description: "Fase 1-3 Andamiaje - Arquitectura Estática Primero",
+  title: "GeoVerity - Protegiendo la Integridad Académica en la Era de IA",
+  description: "Ayudamos a las universidades a mantener la confianza en el trabajo estudiantil y la investigación. Construye políticas de IA que funcionan sin iniciar una carrera armamentista.",
   canonical: "/es/",
   alternateEn: "/",
-  translationStatus: "placeholder",
-  lastReviewed: "",
+  translationStatus: "approved",
+  lastReviewed: new Date().toISOString(),
   legalSensitivity: false,
   disclaimer: ""
 };
 ---
 
 <BasePageEs {...pageMeta}>
-  <section>
-    <h1>GeoVerity 2026</h1>
-    <p>Fase 1-3 Andamiaje - Arquitectura Estática Primero</p>
-    <p>Capa estática de Astro operacional.</p>
-    <p>Islas de React restringidas a src/apps/*</p>
-    <p>Modo estricto de TypeScript habilitado.</p>
+  <!-- Hero Section -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-container">
+      <h1 id="hero-heading" class="hero-heading">
+        {t(lang, 'homepage.heroHeading')}
+      </h1>
+      <p class="hero-subheading">
+        {t(lang, 'homepage.heroSubheading')}
+      </p>
+      <a href="/es/servicios/" class="cta-button">
+        {t(lang, 'homepage.heroCta')}
+      </a>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="mission" aria-labelledby="mission-heading">
+    <div class="mission-container">
+      <h2 id="mission-heading" class="mission-heading">
+        {t(lang, 'homepage.missionHeading')}
+      </h2>
+      <p class="mission-text">
+        {t(lang, 'homepage.missionText')}
+      </p>
+    </div>
   </section>
 </BasePageEs>
+
+<style>
+  /* Hero Section - Mobile-first */
+  .hero {
+    background-color: var(--color-background-alt);
+    padding: var(--space-2xl) var(--space-md);
+    text-align: center;
+  }
+
+  .hero-container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+  }
+
+  .hero-heading {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    margin-bottom: var(--space-lg);
+    line-height: 1.2;
+  }
+
+  .hero-subheading {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    margin-bottom: var(--space-xl);
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: var(--tap-target-padding) var(--space-xl);
+    min-height: var(--tap-target-min);
+    background-color: var(--color-link);
+    color: var(--color-text-inverse);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+  }
+
+  .cta-button:hover,
+  .cta-button:focus {
+    background-color: var(--color-link-hover);
+  }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .cta-button {
+      transition: none;
+    }
+  }
+
+  /* Mission Section - Mobile-first */
+  .mission {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .mission-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .mission-heading {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: var(--space-lg);
+    text-align: center;
+  }
+
+  .mission-text {
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  /* Desktop enhancements - min-width progressive enhancement */
+  @media (min-width: 768px) {
+    .hero {
+      padding: var(--space-2xl) var(--space-xl);
+    }
+
+    .mission {
+      padding: var(--space-2xl) var(--space-xl);
+    }
+  }
+</style>

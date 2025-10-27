@@ -1,0 +1,298 @@
+/**
+ * GeoVerity 2026 Global Styles
+ * Building-pages v2.0.0 compliant
+ */
+
+/* ========================================
+   CSS CUSTOM PROPERTIES (Design Tokens)
+   ======================================== */
+
+:root {
+  /* Typography */
+  --font-family-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-family-serif: Georgia, Cambria, 'Times New Roman', Times, serif;
+
+  /* Font display for performance (prevent FOIT/FOUC) */
+  font-display: swap;
+
+  /* Colors - WCAG 2.2 AA compliant contrast */
+  --color-text: #1a1a1a;
+  --color-text-inverse: #ffffff;
+  --color-background: #ffffff;
+  --color-background-alt: #f5f5f5;
+
+  /* Focus indicator - WCAG 2.2 AA+ */
+  --color-focus: #0066cc;
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+
+  /* Interactive elements */
+  --color-link: #0066cc;
+  --color-link-hover: #004499;
+  --color-link-visited: #551a8b;
+
+  /* Tap targets - Building-pages compliant */
+  --tap-target-min: 44px; /* Preferred minimum */
+  --tap-target-comfortable: 48px;
+  --tap-target-padding: 12px; /* For 32px controls */
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* Layout */
+  --container-max-width: 1200px;
+  --header-height: 64px;
+
+  /* Z-index scale */
+  --z-skip-link: 9999;
+  --z-header: 1000;
+  --z-drawer: 1100;
+  --z-overlay: 1050;
+}
+
+/* ========================================
+   CSS RESET & BASE STYLES
+   ======================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+/* ========================================
+   FOCUS MANAGEMENT (WCAG 2.2 AA+)
+   ======================================== */
+
+/* Always visible focus - customized but NEVER removed */
+:focus {
+  outline: var(--focus-ring-width) solid var(--color-focus);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* Enhanced focus for keyboard users */
+:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* Focus within for containers */
+:focus-within {
+  /* Used for form groups, nav containers */
+}
+
+/* Skip link - must be visible on focus */
+.skip-link {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  z-index: var(--z-skip-link);
+  padding: var(--tap-target-padding);
+  background-color: var(--color-focus);
+  color: var(--color-text-inverse);
+  text-decoration: none;
+  border-radius: 4px;
+
+  /* Hidden until focused - Building-pages requirement */
+  transform: translateY(-200%);
+  transition: transform 0.2s ease-in-out;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* ========================================
+   TAP TARGETS (Building-pages §4)
+   ======================================== */
+
+/* All interactive elements must meet tap target minimum */
+a,
+button,
+[role="button"],
+[type="button"],
+[type="submit"],
+[type="reset"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  min-height: var(--tap-target-min);
+  min-width: var(--tap-target-min);
+}
+
+/* Alternative: 32px control + 12px padding */
+.tap-target-compact {
+  min-height: 32px;
+  min-width: 32px;
+  padding: var(--tap-target-padding);
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+}
+
+/* ========================================
+   LINKS (WCAG 2.2 AA Contrast)
+   ======================================== */
+
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+a:visited {
+  color: var(--color-link-visited);
+}
+
+a:active {
+  color: var(--color-link-hover);
+}
+
+/* ========================================
+   LANDMARKS & LAYOUT
+   ======================================== */
+
+/* Ensure landmarks are properly structured */
+header[role="banner"],
+nav[role="navigation"],
+main[role="main"],
+footer[role="contentinfo"] {
+  /* Semantic HTML provides roles automatically */
+}
+
+/* ========================================
+   RESPONSIVE / MOBILE-FIRST
+   ======================================== */
+
+/* Base styles are mobile (320px+) */
+/* Use min-width media queries for progressive enhancement */
+
+@media (min-width: 768px) {
+  :root {
+    --header-height: 80px;
+  }
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Screen reader only (for ARIA live regions, labels) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Visually hidden but focusable (for skip links) */
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+
+/* Prevent layout shift from images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Aspect ratio for hero images */
+.hero-image {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* ========================================
+   REDUCED MOTION (Accessibility)
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========================================
+   HIGH CONTRAST MODE (Forced Colors)
+   ======================================== */
+
+@media (forced-colors: active) {
+  /* Ensure focus rings visible in high contrast mode */
+  :focus-visible {
+    outline: 2px solid currentColor;
+  }
+
+  .skip-link:focus {
+    outline: 2px solid currentColor;
+  }
+}

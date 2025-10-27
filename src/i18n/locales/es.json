@@ -1,0 +1,30 @@
+{
+  "common": {
+    "skipToMain": "Saltar al contenido principal",
+    "menu": "Menú",
+    "closeMenu": "Cerrar menú",
+    "navigationOpened": "Menú de navegación abierto",
+    "navigationClosed": "Menú de navegación cerrado"
+  },
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "insights": "Perspectivas",
+    "contact": "Contacto"
+  },
+  "languageSwitcher": {
+    "label": "Idioma",
+    "english": "English",
+    "spanish": "Español"
+  },
+  "homepage": {
+    "heroHeading": "Protegiendo la Integridad Académica en la Era de IA",
+    "heroSubheading": "Ayudamos a las universidades a mantener la confianza en el trabajo estudiantil y la investigación. Construye políticas de IA que funcionan sin iniciar una carrera armamentista.",
+    "heroCta": "Explore Nuestros Servicios",
+    "missionHeading": "Nuestra Misión",
+    "missionText": "Nos asociamos con universidades para construir marcos de integridad académica. Los profesores aprenden a evaluar el trabajo estudiantil en entornos de IA. Las instituciones mantienen estándares mientras adoptan IA de manera responsable."
+  },
+  "footer": {
+    "copyright": "© 2026 GeoVerity. Todos los derechos reservados."
+  }
+}

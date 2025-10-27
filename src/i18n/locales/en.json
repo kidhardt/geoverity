@@ -1,0 +1,30 @@
+{
+  "common": {
+    "skipToMain": "Skip to main content",
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "navigationOpened": "Navigation menu opened",
+    "navigationClosed": "Navigation menu closed"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "insights": "Insights",
+    "contact": "Contact"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "english": "English",
+    "spanish": "Español"
+  },
+  "homepage": {
+    "heroHeading": "Protecting Academic Integrity in the AI Era",
+    "heroSubheading": "We help universities maintain trust in student work and research. Build AI policies that work without starting an arms race.",
+    "heroCta": "Explore Our Services",
+    "missionHeading": "Our Mission",
+    "missionText": "We partner with universities to build academic integrity frameworks. Faculty learn to assess student work in AI environments. Institutions maintain standards while adopting AI responsibly."
+  },
+  "footer": {
+    "copyright": "© 2026 GeoVerity. All rights reserved."
+  }
+}
