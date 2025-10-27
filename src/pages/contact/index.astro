@@ -1,0 +1,78 @@
+---
+import BasePageEn from "@/layouts/BasePageEn.astro";
+import { t } from '@/i18n';
+
+const lang = 'en';
+const pageMeta = {
+  title: "Contact Us - GeoVerity",
+  description: "Tell us about your needs. We'll respond within 24 hours.",
+  translationStatus: "approved",
+  lastReviewed: new Date().toISOString()
+};
+---
+
+<BasePageEn {...pageMeta}>
+  <article>
+    <section class="hero" aria-labelledby="hero-heading">
+      <h1 id="hero-heading">{t(lang, 'contact.heroHeading')}</h1>
+      <p class="hero-subheading">{t(lang, 'contact.heroSubheading')}</p>
+    </section>
+
+    <section class="contact-form-section" aria-labelledby="form-heading">
+      <h2 id="form-heading">{t(lang, 'contact.formHeading')}</h2>
+
+      <div class="placeholder">
+        <p>{t(lang, 'contact.placeholder')}</p>
+      </div>
+
+      <!-- TODO: React island for contact form will be mounted here -->
+      <!-- See geoverity-102 for implementation details -->
+    </section>
+  </article>
+</BasePageEn>
+
+<style>
+  article {
+    max-width: var(--content-width, 70ch);
+    margin-inline: auto;
+  }
+
+  .hero {
+    padding: var(--space-xl) var(--space-md);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+  }
+
+  .hero h1 {
+    font-size: var(--font-size-xxxl);
+    margin-bottom: var(--space-sm);
+  }
+
+  .hero-subheading {
+    font-size: var(--font-size-lg);
+    max-width: 60ch;
+    margin-inline: auto;
+  }
+
+  .contact-form-section {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .contact-form-section h2 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--space-md);
+    text-align: center;
+  }
+
+  .placeholder {
+    padding: var(--space-xl);
+    text-align: center;
+    background-color: var(--color-background-secondary, #f5f5f5);
+    border-radius: var(--radius-md);
+  }
+
+  .placeholder p {
+    margin: 0;
+    font-size: var(--font-size-lg);
+  }
+</style>
