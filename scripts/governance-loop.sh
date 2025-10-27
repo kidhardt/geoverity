@@ -11,6 +11,10 @@ echo "[1/6] TypeScript strict mode..."
 npx tsc --noEmit | tee -a "$LOGFILE"
 
 echo "[2/6] Validation & Governance..."
+if [ ! -d "dist" ]; then
+  echo "ERROR: dist/ directory not found. Run 'npm run build' first." | tee -a "$LOGFILE"
+  exit 1
+fi
 node scripts/beads/validate.js | tee -a "$LOGFILE"
 node scripts/validate_localization.js | tee -a "$LOGFILE"
 node scripts/data_governance_scan.js | tee -a "$LOGFILE"

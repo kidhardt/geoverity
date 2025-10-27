@@ -3,15 +3,24 @@ name: branding
 description: GeoVerity 2026 brand identity and visual styling - colors, typography, spacing, voice and tone for consistent corporate identity across web, documentation, and presentations
 ---
 
-# GeoVerity Branding Skill
+# GeoVerity Branding Skill — Minimalist Web Experience
+
+**Version:** 3.0.0
+**Effective:** January 2026
+**Review Cadence:** Quarterly
+**Maintained by:** GeoVerity Brand & Experience Council
 
 Use this skill when creating or styling GeoVerity-branded materials including web pages, documentation, presentations, or visual assets.
 
-**Keywords:** branding, corporate identity, visual identity, styling, brand colors, typography, GeoVerity brand, visual design, design system
+**Keywords:** branding, corporate identity, visual identity, styling, brand colors, typography, GeoVerity brand, visual design, design system, minimalism
 
 ---
 
-## Brand Overview
+## Brand Vision
+
+GeoVerity's digital presence embodies **clarity, focus, and humanity**.
+
+Minimalism is the core design language — every element has purpose, every space breathes intention. Bold typography, confident whitespace, and subtle motion express our precision and empathy. Performance, accessibility, and trust are non-negotiable.
 
 GeoVerity positions itself as a **trustworthy, precise, and globally-minded** AI data and governance partner. The brand conveys:
 
@@ -19,6 +28,17 @@ GeoVerity positions itself as a **trustworthy, precise, and globally-minded** AI
 - **Trust**: Transparency, ethical practices, proven methodologies
 - **Global Reach**: Multilingual capabilities (120+ languages), cultural awareness
 - **Academic Authority**: Graduate-level rigor, research-backed approaches
+
+---
+
+## Core Design Principles
+
+1. **Clarity Enhancement** – Remove distractions; emphasize message hierarchy
+2. **Stronger Visual Hierarchy** – Use scale, weight, and space to direct attention
+3. **Performance & Device Readiness** – Lean, fast, and fluid across all devices
+4. **Intentional Whitespace** – Space is structure, not an afterthought
+5. **Minimal but Expressive** – Bold typography and authentic visuals replace clutter
+6. **Personality-Driven Interaction** – GeoVerity feels human, warm, and confident
 
 ---
 
@@ -188,10 +208,16 @@ Use consistent spacing for rhythm and hierarchy:
 - Use bilingual examples where appropriate
 - Respect cultural nuance in examples
 
-**Academically Rigorous:**
-- Graduate-level vocabulary where appropriate
-- Citations and references for claims
-- Methodology explanations for technical audiences
+**Register-Appropriate Language:**
+- **IMPORTANT:** See `languaging` skill for mandatory register stratification rules
+- **Homepage/Services pages:** Plain professional language (B2-C1 CEFR)
+  - Active voice, SVO order, main clause initial (no "Because X, Y..." or "While X, Y...")
+  - Define technical terms on first use
+  - Target: Administrators and project managers who value clear, actionable language
+- **Insights Posts ONLY:** Academic register (C1-C2 CEFR)
+  - Complex syntax, nominalization, disciplinary terminology acceptable
+  - Target: Researchers and thought leaders expecting scholarly argumentation
+  - Graduate-level vocabulary, citations, methodology explanations
 
 ### Tone by Context
 
@@ -556,13 +582,247 @@ const { title, description, href, icon } = Astro.props;
 
 ---
 
+---
+
+## Interactive Experience Layer
+
+### Interactive Product Playgrounds
+
+**Purpose:** Let users *experience* value before commitment.
+
+**Benefits:**
+- Faster understanding of complex offerings
+- Higher engagement and time-on-site
+- Better-qualified leads
+- Reduced friction in decision-making
+
+**Implementation Guidelines:**
+- Begin with one interactive feature (calculator, demo, visualization)
+- Provide instant feedback for every user action
+- Integrate seamlessly into minimalist layouts with clear CTAs
+- Track engagement metrics; surface high-conversion interactions
+
+**Examples:**
+- ROI/pacing calculators
+- Parameter-driven product previews
+- Interactive data quality visualizations
+- Model evaluation sandboxes
+
+**Technical Requirements:**
+- Performant builds (tree-shaken modules, minimal dependencies)
+- Full keyboard accessibility and ARIA labeling
+- Mobile-responsive with touch optimization
+- Consistent with typography/color/spacing tokens
+- Lazy-loaded where appropriate (`client:idle` or `client:visible`)
+
+---
+
+## Layout & Grid System
+
+### Grid Structure
+- **Desktop:** 12-column grid
+- **Tablet:** 8-column grid
+- **Mobile:** 4-column grid
+- **Base spacing unit:** 8px scale (8, 16, 24, 32, 40, 48...)
+
+### Section Guidelines
+**Hero Section:**
+- One headline
+- One supporting visual
+- One primary CTA
+- Maximum 5 modules per page
+- Whitespace separation ≥ 48px between modules
+
+**Content Modules:**
+- **Benefits:** Concise statements with minimal iconography
+- **Testimonials:** Single quote or focused slider with ample breathing room
+- **Interactive Tools:** Framed modules with generous margins
+- **Footer:** Simple structure, clear legal/accessibility links, language toggle
+
+### Component Specifications
+**Maximum line length:** 60-75 characters for body text
+**Hero max-width:** 60ch for readability
+**Cards:** Consistent padding (1.5rem), 8px border-radius
+**Buttons:** 8px border-radius, ample padding, 44px minimum tap target
+
+---
+
+## Performance & UX Targets
+
+### Core Web Vitals
+- **LCP** (Largest Contentful Paint): ≤ 2.5s
+- **INP** (Interaction to Next Paint): < 200ms
+- **CLS** (Cumulative Layout Shift): < 0.1
+- **TTI** (Time to Interactive): < 3s
+
+### Perceived Performance
+- **Brand Latency:** ≤ 150ms (time from user action to visual feedback)
+- **Animation Duration:** 100-300ms for micro-interactions
+- **Page Transitions:** < 500ms
+
+### Instrumentation
+Embed UserTiming marks for RUM dashboards:
+```javascript
+performance.mark('cta_click');
+performance.measure('hero_interaction', 'nav_start', 'cta_click');
+```
+
+---
+
+## Motion & Interaction Design
+
+### Motion System
+- Use `@media (prefers-reduced-motion: reduce)` to respect user preferences
+- All micro-animations must have reduced-motion fallback
+- Transition durations: 100-150ms (fast), 200-300ms (standard)
+- Easing: `ease-out` for entrances, `ease-in` for exits
+
+**Framer Motion Example:**
+```jsx
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.3, ease: "easeOut" }}
+>
+  {content}
+</motion.div>
+```
+
+### Haptic Feedback (Mobile)
+Optional haptic feedback for mobile CTAs via Web Vibration API:
+```javascript
+if ('vibrate' in navigator) {
+  navigator.vibrate(10); // 10ms subtle vibration
+}
+```
+
+### Ambient Mode (Dark Mode Support)
+Detect and adapt to user preferences:
+```css
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #4A90C8; /* Lightened for dark backgrounds */
+    --color-bg: #1A1A1A;
+    --color-text: #F8F9FA;
+  }
+}
+```
+
+---
+
+## Localization & Cultural Adaptivity
+
+### Localization Parity Rule
+Every content surface must include:
+- **Translation status metadata** (`translationStatus: "complete" | "placeholder" | "needs-review"`)
+- **RTL layout verification** for Arabic, Hebrew
+- **hreflang + `lang` attributes** on all pages
+- **Tone alignment review** for cultural appropriateness
+
+### Cultural Flexibility Matrix
+
+| Region | Font Pair | Tone Adjustment |
+|---------|------------|-----------------|
+| North America | Inter + Fira Code | Friendly-professional |
+| Latin America | Inter + Fira Code | Warm + direct |
+| MENA | Noto Sans Arabic + system | Respectful-formal |
+
+### RTL Support
+```css
+[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .hero-content {
+  margin-right: auto;
+  margin-left: 0;
+}
+```
+
+---
+
+## Governance & Quality Assurance
+
+### Brand QA Layer (Automated)
+Each merge to `main` runs automated checks for:
+- ✅ Font-weight usage compliance (600-700 for headings, 400-500 for body)
+- ✅ Color-contrast ratios (WCAG 2.2 AA minimum)
+- ✅ Spacing uniformity (8px scale adherence)
+- ✅ Alt-text completeness on all images
+
+**Non-compliant PRs are blocked until fixed.**
+
+### Governance Cadence
+- **Quarterly review:** Accessibility updates, typography performance, analytics insights
+- **Annual audit:** Alignment with brand personality & AI tone systems
+- **Versioning:** Update header metadata (v3.x.x, date, reviewer)
+
+---
+
+## AI Content & Co-Design Alignment
+
+### AI Co-Design Protocol
+All AI-assisted content must include:
+```json
+{
+  "aiGenerated": true,
+  "reviewedBy": "HumanReviewerID",
+  "provenanceHash": "C2PA-compatible-hash",
+  "approvalDate": "2025-10-26"
+}
+```
+
+**Human reviewer approval required before publication.**
+
+### Tone Calibration System
+- Train internal AI tools on brand voice embeddings
+- Validate quarterly via content audits
+- Maintain dataset of approved tone samples
+- Flag deviations from brand voice for review
+
+### Content Integrity Layer
+- Embed provenance metadata into all final assets
+- Automate verification through CI/CD
+- Track content lineage from generation to publication
+
+---
+
+## Data-Driven Brand Analytics
+
+### Success Metrics Dashboard
+
+| Module | Metric | Tool | Threshold |
+|---------|---------|------|-----------|
+| Hero | Engagement time | RUM / GA4 | > 3s avg |
+| CTA | Click-through rate | Plausible | > 7% |
+| Calculator | Completion rate | Mixpanel | > 40% |
+| Typography | Brand recall | Quarterly survey | +15% YoY |
+| Accessibility | Contrast compliance | Lighthouse | 100% |
+
+### Tracking Implementation
+```javascript
+// Track interactive module engagement
+function trackModuleEngagement(moduleName, action) {
+  if (typeof plausible !== 'undefined') {
+    plausible('Module Interaction', {
+      props: { module: moduleName, action: action }
+    });
+  }
+}
+```
+
+---
+
 ## Integration with Other Skills
 
 When using the branding skill:
 
-1. **Always combine with `building-pages`** for accessibility/performance compliance
-2. **Use with `templating-pages`** for Astro-specific implementation
-3. **Reference in `generating-json-ld`** for consistent brand representation in structured data
+1. **MANDATORY: Use `languaging` first** before writing ANY content - establishes register stratification (plain language for services, academic for Insights)
+2. **Always combine with `building-pages`** for accessibility/performance compliance
+3. **Use with `templating-pages`** for Astro-specific implementation
+4. **Reference in `generating-json-ld`** for consistent brand representation in structured data
+5. **Follow `making-skill-decisions`** for skill discovery and usage workflows
 
 ---
 
@@ -570,27 +830,77 @@ When using the branding skill:
 
 Before shipping any branded material:
 
+### Visual Consistency
 - [ ] Colors match specified hex values (no approximations)
 - [ ] Typography uses Inter font family (or system fallback)
 - [ ] Contrast ratios meet WCAG 2.2 AA (4.5:1 minimum)
-- [ ] Spacing follows design tokens (no arbitrary values)
-- [ ] Voice is precise, trustworthy, and globally-minded
-- [ ] Tone matches content context (marketing, technical, legal)
+- [ ] Spacing follows 8px scale tokens (no arbitrary values)
 - [ ] CTAs use primary blue (#2C5F8D)
 - [ ] Focus states are visible and meet 2px minimum
 - [ ] Mobile scales typography and spacing appropriately
 - [ ] No pure black (#000000) used for text
 
+### Content & Voice
+- [ ] Voice is precise, trustworthy, and globally-minded
+- [ ] Tone matches content context (marketing, technical, legal)
+- [ ] All user-facing strings have bilingual support (EN + ES minimum)
+- [ ] Real people, real contexts (no stock photo clichés)
+- [ ] Microcopy is helpful and low-friction
+
+### Performance & Accessibility
+- [ ] LCP ≤ 2.5s, INP < 200ms, CLS < 0.1
+- [ ] Keyboard navigation fully functional
+- [ ] Screen reader tested
+- [ ] `prefers-reduced-motion` respected
+- [ ] RTL layout verified if applicable
+
+### Governance
+- [ ] AI-generated content has provenance metadata
+- [ ] Translation status documented
+- [ ] Interactive modules have success metrics defined
+- [ ] Brand QA checks pass in CI
+
+---
+
+## Brand Systems Roadmap 2026–2028
+
+**2026 Q1-Q2:**
+- Complete interactive playground suite (calculators, demos)
+- Implement automated brand QA layer
+- Launch quarterly brand analytics dashboard
+
+**2026 Q3-Q4:**
+- Expand cultural flexibility matrix to 5+ regions
+- Deploy AI tone calibration system
+- Complete accessibility AAA compliance audit
+
+**2027:**
+- Advanced motion design system
+- Multisensory brand experience (haptics, spatial audio)
+- Predictive personalization based on user engagement patterns
+
+**2028:**
+- AI-native content co-design workflows
+- Real-time brand performance optimization
+- Automated localization with cultural adaptation
+
 ---
 
 ## Maintenance
 
+**Version:** 3.0.0
 **Last Updated:** 2025-10-26
-**Owner:** GeoVerity Brand Team
+**Owner:** GeoVerity Brand & Experience Council
 **Contact:** See .claude/skills/ for updates
 
-This skill will evolve as the brand matures. Update this file when:
+This skill is no longer a static reference — it's a governed, measurable, adaptive system. It evolves with accessibility standards, localization demands, and AI ethics. Every visual, motion, or word in GeoVerity's ecosystem must serve one purpose: **clarity with integrity**.
+
+### Update Triggers
+Update this file when:
 - New colors are added to the palette
 - Typography requirements change
 - New component patterns emerge
 - Brand voice guidelines are refined
+- Performance targets are adjusted
+- Cultural flexibility matrix expands
+- AI governance protocols evolve

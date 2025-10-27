@@ -2,7 +2,8 @@
   "name": "eslint-plugin-beads",
   "version": "1.0.0",
   "description": "ESLint plugin to enforce beads issue tracking in code comments",
-  "main": "index.js",
+  "main": "index.cjs",
+  "type": "commonjs",
   "keywords": [
     "eslint",
     "eslintplugin",

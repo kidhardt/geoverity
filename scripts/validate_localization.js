@@ -7,7 +7,7 @@ import fs from "fs";
 import path from "path";
 
 const root = process.cwd();
-const publicDirs = ["public", "public/es"];
+const BUILD_DIR = process.env.BUILD_DIR || 'dist';
 let ok = true;
 
 function checkParity(enDir, esDir) {
@@ -21,9 +21,17 @@ function checkParity(enDir, esDir) {
   }
 }
 
-for (const dir of ["public"]) {
-  const esDir = path.join(root, "public", "es");
-  if (fs.existsSync(dir) && fs.existsSync(esDir)) checkParity(dir, esDir);
+const enDir = path.join(root, BUILD_DIR);
+const esDir = path.join(root, BUILD_DIR, "es");
+
+if (!fs.existsSync(BUILD_DIR)) {
+  console.error(`❌ Build directory not found: ${BUILD_DIR}`);
+  console.error(`Run 'npm run build' first`);
+  process.exit(1);
+}
+
+if (fs.existsSync(enDir) && fs.existsSync(esDir)) {
+  checkParity(enDir, esDir);
 }
 
 if (ok) console.log("✅ Localization parity validated");

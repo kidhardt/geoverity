@@ -6,11 +6,19 @@
 import fs from "fs";
 import path from "path";
 
-const htmlFiles = fs.readdirSync("public").filter(f => f.endsWith(".html"));
+const BUILD_DIR = process.env.BUILD_DIR || 'dist';
+
+if (!fs.existsSync(BUILD_DIR)) {
+  console.error(`❌ Build directory not found: ${BUILD_DIR}`);
+  console.error(`Run 'npm run build' first`);
+  process.exit(1);
+}
+
+const htmlFiles = fs.readdirSync(BUILD_DIR).filter(f => f.endsWith(".html"));
 let ok = true;
 
 for (const file of htmlFiles) {
-  const content = fs.readFileSync(path.join("public", file), "utf8");
+  const content = fs.readFileSync(path.join(BUILD_DIR, file), "utf8");
   if (!content.includes("<html lang=")) {
     console.error(`Missing lang attribute in ${file}`);
     ok = false;

@@ -784,15 +784,26 @@ Before I create these templates, please review and answer:
 
 ### 1. Visual Design & Styling
 
-**Q**: Do you have brand guidelines (colors, fonts, spacing)?
-- If YES: Please provide or point to design system
-- If NO: Should I create a minimal, professional default style?
+**UPDATED:** Brand guidelines now defined in [.claude/skills/branding/SKILL.md](.claude/skills/branding/SKILL.md) v3.0.0
+
+**Brand System Summary:**
+- **Colors:** Primary Blue (#2C5F8D), Accent Green (#3B7A57), Accent Orange (#D97757)
+- **Typography:** Inter font family (600 weight headings, 400 body)
+- **Type Scale (Desktop):** h1: 2.5rem, h2: 2rem, h3: 1.5rem, body: 1rem
+- **Type Scale (Mobile):** h1: 2rem, h2: 1.75rem, h3: 1.375rem, body: 1rem
+- **Spacing System:** 8px scale (--space-xs: 0.25rem → --space-3xl: 4rem)
+- **Border Radius:** 4px (buttons), 8px (cards), 12px (large modules)
+- **Design Tokens:** CSS custom properties defined in `:root`
+- **Accessibility:** WCAG 2.2 AA+ (contrast ratios verified)
+- **Grid System:** 12-column (desktop), 8-column (tablet), 4-column (mobile)
 
 **Q**: What's your preferred approach to styling?
-- Option A: Inline Tailwind classes in components
-- Option B: Scoped CSS in each .astro component
-- Option C: Global CSS + CSS modules
-- Option D: Mix of above
+- **Option A:** Inline Tailwind classes in components ❌ (Not aligned with branding skill)
+- **Option B:** Scoped CSS in each .astro component + CSS design tokens ✅ **RECOMMENDED**
+- **Option C:** Global CSS + CSS modules ⚠️ (Possible but less component-scoped)
+- **Option D:** Mix of above ⚠️ (Can lead to inconsistency)
+
+**Recommendation:** Option B (Scoped CSS with design tokens) per branding skill examples
 
 ### 2. Component Structure
 
@@ -824,34 +835,63 @@ Please rank 1-8:
 
 ### 5. Content Decisions
 
+**UPDATED:** Voice and tone guidelines defined in branding skill v3.0.0
+
+**Brand Voice Attributes:**
+- **Precise:** Specific numbers, cited sources, avoid vague claims
+- **Trustworthy:** Transparent about limitations, active voice, no hyperbole
+- **Globally-Minded:** International standards (GDPR, NIST), cultural nuance
+- **Academically Rigorous:** Graduate-level vocabulary, citations, methodology
+
 **Q**: For the initial stub pages (Phase 11), should content be:
-- Option A: Actual marketing copy (requires content writing)
-- Option B: "Lorem ipsum" style placeholders
-- Option C: Factual descriptions only (like current placeholder)
-- Option D: Mix depending on page type
+- Option A: Actual marketing copy (requires content writing) ✅ **RECOMMENDED** for Homepage + Higher Ed pillar
+- Option B: "Lorem ipsum" style placeholders ❌ (Conflicts with brand authenticity)
+- Option C: Factual descriptions only (like current placeholder) ✅ **ACCEPTABLE** for remaining pages
+- Option D: Mix depending on page type ✅ **RECOMMENDED** (A for key pages, C for others)
 
 **Q**: Should I draft actual content for key pages (Homepage, Higher Ed pillar)?
+**Recommendation:** YES for Homepage and Higher Ed pillar, using branding voice guidelines
 
 ### 6. React Islands
 
+**UPDATED:** Interactive experience guidelines defined in branding skill v3.0.0
+
+**Interactive Product Playgrounds Philosophy:**
+- "Let users *experience* value before commitment"
+- Faster understanding of complex offerings
+- Higher engagement and time-on-site
+- Better-qualified leads
+
+**Technical Requirements (per branding):**
+- Performant builds (tree-shaken modules)
+- Full keyboard accessibility + ARIA labeling
+- Mobile-responsive with touch optimization
+- Consistent with design tokens
+- Lazy-loaded (`client:idle` or `client:visible`)
+
 **Q**: Contact form priority?
-- Should I build the React Contact Form island now (bead 700)?
-- Or just create the mount point placeholder?
+- Build React Contact Form island now (bead 700)? ⚠️ **PHASE 11 DEFER**
+- Create mount point placeholder? ✅ **RECOMMENDED** (aligns with phased approach)
 
 **Q**: Research Integrity tools?
-- Build P-Value Assessor now (bead 701)?
-- Or wait for later phase?
+- Build P-Value Assessor now (bead 701)? ❌ **PHASE 12+**
+- Wait for later phase? ✅ **RECOMMENDED** (focus on content surfaces first)
 
 ### 7. Mobile-First Specifics
 
+**UPDATED:** Mobile specifications defined in branding skill v3.0.0
+
 **Q**: Mobile breakpoints?
-- Default: 640px (mobile), 768px (tablet), 1024px (desktop)?
-- Or custom breakpoints?
+- **Branding Standard:** 768px (tablet), 1024px (desktop)
+- **Grid:** 4-column (mobile), 8-column (tablet), 12-column (desktop)
+- **Spacing:** Reduce by 25-50% on mobile, minimum 1rem padding on all sides
+- **Typography:** Responsive type scale (h1: 2.5rem desktop → 2rem mobile)
+- **Tap Targets:** 44px minimum (building-pages + branding requirement)
 
 **Q**: Navigation on mobile?
-- Hamburger menu?
-- Bottom nav?
-- Simple stacked menu?
+- Hamburger menu? ✅ **RECOMMENDED** (aligns with minimalist design principles)
+- Bottom nav? ❌ (Not aligned with desktop-to-mobile consistency)
+- Simple stacked menu? ⚠️ (Acceptable for small nav items, but may clutter)
 
 ### 8. Additional Pages
 
@@ -865,12 +905,39 @@ Please rank 1-8:
 
 ## Next Steps
 
-Once you answer the questions above, I will:
+Once you answer the remaining questions above, I will:
 
-1. Create the approved templates in order of priority
-2. Build the component library (if approved)
-3. Set up styling system (per your choice)
-4. Create example pages using the templates
-5. Generate the first batch of Phase 11 pages
+1. **Set up design system:**
+   - Create `src/styles/tokens.css` with CSS custom properties from branding skill
+   - Create `src/styles/global.css` with base styles (typography, resets)
+   - Import design tokens in BasePageEn/BasePageEs layouts
 
-**Please review the template specifications above and provide your approval/modifications.**
+2. **Create component library** (if approved):
+   - Navigation.astro (with hamburger menu for mobile)
+   - Footer.astro (with language switcher)
+   - CTAButton.astro (primary/secondary/tertiary variants per branding)
+   - PillarCard.astro, SpokeCard.astro, InsightCard.astro
+   - Breadcrumb.astro, CategoryBadge.astro
+
+3. **Create templates in priority order:**
+   - Each template uses scoped CSS + design tokens
+   - All components follow branding guidelines (colors, typography, spacing)
+   - WCAG 2.2 AA+ accessibility requirements
+   - Mobile-first responsive design (768px tablet, 1024px desktop)
+
+4. **Draft content for key pages:**
+   - Homepage hero (precise, trustworthy, globally-minded voice)
+   - Higher Ed pillar content (academically rigorous tone)
+   - Factual stubs for remaining pages
+
+5. **Execute Phase 11 beads:**
+   - Start with geoverity-100 (Homepage EN)
+   - Continue with geoverity-200 (Higher Ed Pillar)
+   - Follow priority order from template approval
+
+**Updated Questions Still Requiring Answers:**
+- Question 2: Full component library or inline components?
+- Question 3: Content source preference (JSON, Content Collections, mix)?
+- Question 4: Template creation priority order (rank 1-8)
+
+**Please review the updated template specifications above and provide your approval/modifications.**

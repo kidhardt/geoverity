@@ -1,3 +1,8 @@
+---
+name: using-sensitive-content
+description: Use when migrating or creating content with funding amounts, immigration/visa advice, job market predictions, academic integrity issues, or AI ethics discussions - tracks high-sensitivity content requiring governance compliance disclaimers and lastReviewed fields before deployment
+---
+
 # Using Sensitive Content Skill
 
 ## Overview

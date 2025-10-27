@@ -91,14 +91,27 @@ skills/
 
 ## SKILL.md Structure
 
-**Frontmatter (YAML):**
-- Only two fields supported: `name` and `description`
+**CRITICAL: Skills use YAML frontmatter + Markdown content, NOT pure YAML files.**
+
+### File Format
+
+**YAML Frontmatter (ONLY for metadata):**
+- Delimited by `---` at top and bottom
+- Only two fields: `name` and `description`
 - Max 1024 characters total
 - `name`: Use letters, numbers, and hyphens only (no parentheses, special chars)
 - `description`: Third-person, includes BOTH what it does AND when to use it
   - Start with "Use when..." to focus on triggering conditions
   - Include specific symptoms, situations, and contexts
   - Keep under 500 characters if possible
+
+**Markdown Content (EVERYTHING ELSE):**
+- All skill content below frontmatter is Markdown
+- Headings, lists, tables, code blocks, text
+- NOT YAML - do not write skill content in YAML format
+- Standard Markdown syntax (CommonMark)
+
+### Template
 
 ```markdown
 ---
@@ -132,6 +145,34 @@ What goes wrong + fixes
 
 ## Real-World Impact (optional)
 Concrete results
+```
+
+### ❌ WRONG: Pure YAML File
+```yaml
+name: my-skill
+description: Does something
+content:
+  overview: "This is the skill"
+  sections:
+    - name: "When to Use"
+      content: "Use when..."
+```
+
+### ✅ RIGHT: YAML Frontmatter + Markdown Content
+```markdown
+---
+name: my-skill
+description: Use when doing X - helps with Y
+---
+
+# My Skill
+
+## Overview
+This is the skill overview in Markdown.
+
+## When to Use
+- Use when doing X
+- Use when seeing symptom Y
 ```
 
 
@@ -547,6 +588,67 @@ step2 [label="read file"];
 helper1, helper2, step3, pattern4
 **Why bad:** Labels should have semantic meaning
 
+### ❌ Pure YAML Skill File
+```yaml
+name: my-skill
+description: Does something
+overview: "This is content"
+sections:
+  when-to-use: "Use when..."
+```
+**Why bad:** Skills are Markdown files with YAML frontmatter, not pure YAML
+**Fix:** Use YAML only for frontmatter (name + description), write all content in Markdown
+
+## File Structure Verification (MANDATORY)
+
+**Before reporting skill completion, you MUST verify file structure.**
+
+### Verification Commands
+
+**1. Check frontmatter is valid YAML:**
+```bash
+head -n 10 .claude/skills/SKILL-NAME/SKILL.md
+```
+Expected output:
+- Line 1: `---`
+- Line 2: `name: skill-name`
+- Line 3: `description: Use when...`
+- Line 4: `---`
+- Line 5: (empty line)
+- Line 6: `# Skill Title`
+
+**2. Verify frontmatter length:**
+```bash
+head -n 4 .claude/skills/SKILL-NAME/SKILL.md | wc -c
+```
+Expected: < 1024 characters
+
+**3. Verify content is Markdown (NOT YAML):**
+```bash
+grep -n "^[a-z-]*:" .claude/skills/SKILL-NAME/SKILL.md | head -n 10
+```
+Expected: ONLY matches on lines 2-3 (name: and description: in frontmatter)
+If matches beyond line 4, content is incorrectly formatted as YAML.
+
+### Common Verification Failures
+
+**❌ FAIL: Content formatted as YAML**
+```bash
+$ grep -n "^[a-z-]*:" .claude/skills/my-skill/SKILL.md
+2:name: my-skill
+3:description: Use when...
+7:overview: "This is the skill"  # ❌ WRONG - content should be Markdown
+8:when-to-use: "Use when..."    # ❌ WRONG - content should be Markdown
+```
+
+**✅ PASS: Content formatted as Markdown**
+```bash
+$ grep -n "^[a-z-]*:" .claude/skills/my-skill/SKILL.md
+2:name: my-skill
+3:description: Use when...
+# No matches beyond frontmatter ✅
+```
+
 ## STOP: Before Moving to Next Skill
 
 **After writing ANY skill, you MUST STOP and complete the deployment process.**
@@ -555,6 +657,7 @@ helper1, helper2, step3, pattern4
 - Create multiple skills in batch without testing each
 - Move to next skill before current one is verified
 - Skip testing because "batching is more efficient"
+- Report skill completion without running verification commands
 
 **The deployment checklist below is MANDATORY for EACH skill.**
 
@@ -572,6 +675,7 @@ Deploying untested skills = deploying untested code. It's a violation of quality
 **GREEN Phase - Write Minimal Skill:**
 - [ ] Name uses only letters, numbers, hyphens (no parentheses/special chars)
 - [ ] YAML frontmatter with only name and description (max 1024 chars)
+- [ ] **VERIFY: Frontmatter is YAML (delimited by ---), content is Markdown (NOT YAML)**
 - [ ] Description starts with "Use when..." and includes specific triggers/symptoms
 - [ ] Description written in third person
 - [ ] Keywords throughout for search (errors, symptoms, tools)
@@ -579,6 +683,7 @@ Deploying untested skills = deploying untested code. It's a violation of quality
 - [ ] Address specific baseline failures identified in RED
 - [ ] Code inline OR link to separate file
 - [ ] One excellent example (not multi-language)
+- [ ] **VERIFY: File structure check - Run verification command before reporting completion**
 - [ ] Run scenarios WITH skill - verify agents now comply
 
 **REFACTOR Phase - Close Loopholes:**

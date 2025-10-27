@@ -63,7 +63,13 @@
       "Bash(node test_regex.js:*)",
       "Bash(bd resolve:*)",
       "Bash(bd close:*)",
-      "Bash([ ! -d \".claude/skills/branding\" ])"
+      "Bash([ ! -d \".claude/skills/branding\" ])",
+      "Bash(git push)",
+      "Bash(git push:*)",
+      "Bash([ ! -d \".claude/memory\" ])",
+      "Bash(for skill in .claude/skills/*/SKILL.md)",
+      "Bash(npx astro build:*)",
+      "Skill(making-skill-decisions)"
     ],
     "deny": [],
     "ask": []

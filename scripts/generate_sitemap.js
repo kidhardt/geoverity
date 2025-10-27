@@ -7,8 +7,14 @@ import fs from "fs";
 import path from "path";
 
 const baseUrl = "https://geoverity.com"; // Update with actual domain
-const publicDir = "public";
-const esDir = path.join(publicDir, "es");
+const BUILD_DIR = process.env.BUILD_DIR || 'dist';
+const esDir = path.join(BUILD_DIR, "es");
+
+if (!fs.existsSync(BUILD_DIR)) {
+  console.error(`❌ Build directory not found: ${BUILD_DIR}`);
+  console.error(`Run 'npm run build' first`);
+  process.exit(1);
+}
 
 function scanHtmlFiles(dir, lang = "en") {
   const prefix = lang === "es" ? "/es" : "";
@@ -21,7 +27,7 @@ function scanHtmlFiles(dir, lang = "en") {
       urls.push(...scanHtmlFiles(fullPath, lang));
     } else if (file.name.endsWith(".html")) {
       const relativePath = path
-        .relative(publicDir, fullPath)
+        .relative(BUILD_DIR, fullPath)
         .replace(/\\/g, "/")
         .replace(/\.html$/, "")
         .replace(/index$/, "");
@@ -52,9 +58,9 @@ ${entries}
 }
 
 // Generate EN sitemap
-const enUrls = scanHtmlFiles(publicDir, "en");
+const enUrls = scanHtmlFiles(BUILD_DIR, "en");
 const enSitemap = generateSitemap(enUrls);
-fs.writeFileSync(path.join(publicDir, "sitemap.xml"), enSitemap);
+fs.writeFileSync(path.join(BUILD_DIR, "sitemap.xml"), enSitemap);
 console.log(`✅ Generated EN sitemap with ${enUrls.length} URLs`);
 
 // Generate ES sitemap

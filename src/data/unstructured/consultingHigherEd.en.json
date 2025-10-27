@@ -1,8 +1,28 @@
 {
   "title": "Higher Education Consulting",
+  "title_provenance": {
+    "provenance": "human-edited",
+    "lastEdited": "2025-10-27T00:00:00Z",
+    "autoFixCount": 0
+  },
   "summary": "GeoVerity works with graduate programs and academic leadership to operationalize AI oversight, research integrity expectations, and transparent use policies. This description is controlled content and subject to review.",
+  "summary_provenance": {
+    "provenance": "human-edited",
+    "lastEdited": "2025-10-26T22:22:12Z",
+    "autoFixCount": 0
+  },
+  "disclaimer": "This material describes advisory support and governance design. It does not constitute legal, regulatory, accreditation, or compliance certification.",
+  "disclaimer_provenance": {
+    "provenance": "human-verified",
+    "lastEdited": "2025-10-26T22:22:12Z",
+    "autoFixCount": 0
+  },
   "lastReviewed": "2025-10-26T22:22:12Z",
   "translationStatus": "up-to-date",
   "legalSensitivity": true,
-  "disclaimer": "This material describes advisory support and governance design. It does not constitute legal, regulatory, accreditation, or compliance certification."
+  "_meta": {
+    "contentStatus": "approved",
+    "lastCheckingCrappyWritingRun": "2025-10-26T22:22:12Z",
+    "reviewedBy": "human"
+  }
 }

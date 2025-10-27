@@ -18,6 +18,30 @@ Before invoking this skill, you **MUST** have:
 
 ---
 
+## Content Quality Gate (MANDATORY - v1.3.0)
+
+Before finalizing ANY user-facing text (page titles, descriptions, body copy, CTAs, disclaimers), you **MUST**:
+
+1. ✅ Invoke `languaging` skill (register compliance: B2-C1 for services, C1-C2 for Insights only)
+2. ✅ Invoke `checking-crappy-writing` v1.3.0 skill (AUTO-FIX violations)
+3. ✅ Report auto-fixes to user in structured format
+4. ✅ User reviews and updates provenance to "human-edited"
+5. ✅ User sets _meta.contentStatus to "approved"
+6. ✅ Pass `npm run validate:governance`
+
+**AUTO-FIX WORKFLOW (v1.3.0):**
+- Claude Code assistant automatically fixes AI artifacts (puffery, negative parallelism, emoji, meta-chatbot voice, awkward synonymy)
+- Claude Code assistant reports changes to user (field-by-field)
+- User reviews FIXES (not violations)
+- User approves/rejects/edits
+- Provenance tracking prevents AI text from reaching production
+
+**If provenance check FAILS, STOP. Content cannot be committed until human-reviewed.**
+
+See: [.claude/skills/checking-crappy-writing/SKILL.md](../.claude/skills/checking-crappy-writing/SKILL.md) v1.3.0
+
+---
+
 ## Step 1: Mandatory Compliance Check
 
 **Verify you have:**

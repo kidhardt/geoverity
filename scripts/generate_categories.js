@@ -6,8 +6,14 @@
 import fs from "fs";
 import path from "path";
 
-const publicDir = "public";
-const esDir = path.join(publicDir, "es");
+const BUILD_DIR = process.env.BUILD_DIR || 'dist';
+const esDir = path.join(BUILD_DIR, "es");
+
+if (!fs.existsSync(BUILD_DIR)) {
+  console.error(`❌ Build directory not found: ${BUILD_DIR}`);
+  console.error(`Run 'npm run build' first`);
+  process.exit(1);
+}
 
 function collectPagesByCategory(dir, lang = "en") {
   const categories = {};
@@ -60,10 +66,10 @@ ${items}
 }
 
 // Generate EN category pages
-const enCategories = collectPagesByCategory(publicDir, "en");
+const enCategories = collectPagesByCategory(BUILD_DIR, "en");
 for (const [category, pages] of Object.entries(enCategories)) {
   const html = generateCategoryHtml(category, pages, "en");
-  const outputPath = path.join(publicDir, `category-${category}.html`);
+  const outputPath = path.join(BUILD_DIR, `category-${category}.html`);
   fs.writeFileSync(outputPath, html);
   console.log(`✅ Generated EN category page: ${category} (${pages.length} pages)`);
 }

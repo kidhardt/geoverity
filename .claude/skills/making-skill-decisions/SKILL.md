@@ -31,6 +31,16 @@ Before responding to ANY user message, you MUST complete this checklist:
 
 2. Execute skills with the Skill tool
 
+3. **Content writing tasks ALWAYS require TWO skills (v1.3.0 AUTO-FIX workflow):** When the user asks to write, rewrite, audit, or evaluate website content (homepage, services, Insights posts, contact pages, disclaimers, CTAs, page titles/descriptions, UX microcopy, marketing materials), you MUST:
+   - First invoke `languaging` skill (register stratification for audience)
+   - Then invoke `checking-crappy-writing` v1.3.0 skill (AUTO-FIX AI artifacts)
+   - Report auto-fixes to user in structured format (see checking-crappy-writing SKILL.md)
+   - User reviews fixes and updates provenance to "human-edited"
+   - User sets _meta.contentStatus to "approved"
+   - Run `npm run validate:governance` to verify provenance
+   - Iterate until PASS
+   - **Never skip either skill** - register compliance without artifact detection = credibility failure
+
 ## Common Rationalizations That Mean You're About To Fail
 
 If you catch yourself thinking ANY of these thoughts, STOP. You are rationalizing. Check for and use the skill.
@@ -43,6 +53,10 @@ If you catch yourself thinking ANY of these thoughts, STOP. You are rationalizin
 - "This doesn't count as a task" → WRONG. If you're taking action, it's a task. Check for skills.
 - "The skill is overkill for this" → WRONG. Skills exist because simple things become complex. Use it.
 - "I'll just do this one thing first" → WRONG. Check for skills BEFORE doing anything.
+- **"The content looks fine, I don't need to check for AI artifacts"** → WRONG. ALL user-facing content MUST pass `checking-crappy-writing` v1.3.0 with provenance tracking. No exceptions.
+- **"I already ran `languaging`, that's enough"** → WRONG. Register compliance ≠ credibility. Must also run `checking-crappy-writing` v1.3.0 auto-fix workflow.
+- **"This is just a page title, it doesn't need the full checklist"** → WRONG. Page titles are public-facing. They need both skills plus provenance tracking.
+- **"I'll just fix the violations myself instead of running the skill"** → WRONG. Auto-fix workflow is mandatory. User must review FIXES, and provenance must be tracked.
 
 **Why:** Skills document proven techniques that save time and prevent mistakes. Not using available skills means repeating solved problems and making known errors.
 
