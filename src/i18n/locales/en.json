@@ -31,6 +31,18 @@
     "categories": "Categories",
     "allPosts": "All Posts"
   },
+  "servicesHub": {
+    "heroHeading": "Our Services",
+    "heroSubheading": "We help organizations build trust in AI systems and protect academic integrity. Choose the service that fits your needs.",
+    "higherEdHeading": "Higher Education Consulting",
+    "higherEdDesc": "Universities maintain academic integrity in AI environments. We train faculty, build policies, and provide implementation support. Your institution adapts to AI while meeting accreditation standards.",
+    "dataHeading": "Multilingual AI Training Data",
+    "dataDesc": "Verified training data across 120+ languages. We audit datasets to surface bias before deployment. You build AI systems that work fairly across cultures.",
+    "evaluationHeading": "Trustworthy AI Evaluation & Compliance",
+    "evaluationDesc": "Independent evaluation of AI model performance and compliance. We test models against regulatory requirements. You deploy with confidence and meet governance standards.",
+    "governanceHeading": "AI Governance Frameworks",
+    "governanceDesc": "Policy frameworks for responsible AI adoption. We design governance systems that fit your organization. You manage AI risk while enabling innovation."
+  },
   "higherEd": {
     "heroHeading": "Higher Education Consulting",
     "heroSubheading": "We help universities maintain academic integrity in the AI era. Build policies that work without starting an arms race around detection.",

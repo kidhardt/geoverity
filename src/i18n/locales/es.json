@@ -31,6 +31,18 @@
     "categories": "Categorías",
     "allPosts": "Todas las Publicaciones"
   },
+  "servicesHub": {
+    "heroHeading": "Nuestros Servicios",
+    "heroSubheading": "Ayudamos a organizaciones a construir confianza en sistemas de IA y proteger la integridad académica. Elige el servicio que se ajusta a tus necesidades.",
+    "higherEdHeading": "Consultoría para Educación Superior",
+    "higherEdDesc": "Las universidades mantienen la integridad académica en entornos con IA. Capacitamos profesores, construimos políticas y brindamos apoyo en implementación. Tu institución se adapta a la IA mientras cumple con los estándares de acreditación.",
+    "dataHeading": "Datos de Entrenamiento de IA Multilingües",
+    "dataDesc": "Datos de entrenamiento verificados en más de 120 idiomas. Auditamos conjuntos de datos para detectar sesgos antes del despliegue. Construyes sistemas de IA que funcionan equitativamente en todas las culturas.",
+    "evaluationHeading": "Evaluación de IA Confiable y Cumplimiento",
+    "evaluationDesc": "Evaluación independiente del rendimiento y cumplimiento de modelos de IA. Probamos modelos contra requisitos regulatorios. Despliegas con confianza y cumples con los estándares de gobernanza.",
+    "governanceHeading": "Marcos de Gobernanza de IA",
+    "governanceDesc": "Marcos de políticas para la adopción responsable de IA. Diseñamos sistemas de gobernanza que se ajustan a tu organización. Gestionas el riesgo de IA mientras permites la innovación."
+  },
   "higherEd": {
     "heroHeading": "Consultoría para Educación Superior",
     "heroSubheading": "Ayudamos a las universidades a mantener la integridad académica en la era de la IA. Construimos políticas que funcionan sin iniciar una carrera armamentista de detección.",
