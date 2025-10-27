@@ -1,0 +1,20 @@
+---
+import BasePageEs from "@/layouts/BasePageEs.astro";
+import { t } from '@/i18n';
+const lang = 'es';
+const pageMeta = { title: "Marcos de Gobernanza de IA - GeoVerity", description: "Marcos de políticas para la adopción responsable de IA.", translationStatus: "approved", lastReviewed: new Date().toISOString() };
+---
+<BasePageEs {...pageMeta}>
+<article>
+<section class="hero" aria-labelledby="hero-heading"><h1 id="hero-heading">{t(lang, 'governance.heroHeading')}</h1><p class="hero-subheading">{t(lang, 'governance.heroSubheading')}</p></section>
+<section class="content-section" aria-labelledby="problem-heading"><h2 id="problem-heading">{t(lang, 'governance.problemHeading')}</h2><p>{t(lang, 'governance.problemPara1')}</p><p>{t(lang, 'governance.problemPara2')}</p></section>
+<section class="content-section" aria-labelledby="approach-heading"><h2 id="approach-heading">{t(lang, 'governance.approachHeading')}</h2><p>{t(lang, 'governance.approachPara1')}</p><p>{t(lang, 'governance.approachPara2')}</p></section>
+<section class="content-section offerings" aria-labelledby="offerings-heading"><h2 id="offerings-heading">{t(lang, 'governance.offeringsHeading')}</h2>
+<div class="offering"><h3>{t(lang, 'governance.policyDesignHeading')}</h3><p>{t(lang, 'governance.policyDesignText')}</p></div>
+<div class="offering"><h3>{t(lang, 'governance.riskHeading')}</h3><p>{t(lang, 'governance.riskText')}</p></div>
+<div class="offering"><h3>{t(lang, 'governance.workflowHeading')}</h3><p>{t(lang, 'governance.workflowText')}</p></div>
+<div class="offering"><h3>{t(lang, 'governance.trainingHeading')}</h3><p>{t(lang, 'governance.trainingText')}</p></div>
+</section>
+</article>
+</BasePageEs>
+<style>article{max-width:var(--content-width,70ch);margin-inline:auto}.hero{padding:var(--space-xl) var(--space-md);text-align:center;margin-bottom:var(--space-lg)}.hero h1{font-size:var(--font-size-xxxl);margin-bottom:var(--space-sm)}.hero-subheading{font-size:var(--font-size-lg);max-width:60ch;margin-inline:auto}.content-section{padding:var(--space-lg) var(--space-md);margin-bottom:var(--space-md)}.content-section h2{font-size:var(--font-size-xxl);margin-bottom:var(--space-md)}.content-section h3{font-size:var(--font-size-xl);margin-bottom:var(--space-xs)}.content-section p{margin-bottom:var(--space-sm);line-height:1.6}.content-section p:last-child{margin-bottom:0}.offerings{display:grid;gap:var(--space-lg)}.offering{padding:var(--space-md);border:1px solid var(--color-border);border-radius:var(--radius-md)}.offering h3{color:var(--color-primary)}@media (min-width:768px){.offerings{grid-template-columns:repeat(2,1fr)}}</style>
