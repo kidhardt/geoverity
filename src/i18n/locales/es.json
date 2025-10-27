@@ -31,6 +31,38 @@
     "categories": "Categorías",
     "allPosts": "Todas las Publicaciones"
   },
+  "insightsCategories": {
+    "academicIntegrity": {
+      "name": "Integridad Académica",
+      "description": "Educación de posgrado, herramientas de IA autorizadas y construcción de marcos de confianza para el trabajo estudiantil.",
+      "heroHeading": "Integridad Académica",
+      "heroSubheading": "Explorando cómo las universidades mantienen la confianza en el trabajo estudiantil mientras adoptan herramientas de IA de manera responsable."
+    },
+    "aiGovernance": {
+      "name": "Gobernanza de IA",
+      "description": "Marcos de políticas, requisitos de divulgación y gobernanza institucional para la adopción de IA.",
+      "heroHeading": "Gobernanza de IA",
+      "heroSubheading": "Construyendo marcos de políticas que gestionan el riesgo de IA mientras permiten la innovación."
+    },
+    "multilingualData": {
+      "name": "Datos Multilingües",
+      "description": "Sesgo en conjuntos de datos, diversidad lingüística y consideraciones éticas en datos de entrenamiento de IA.",
+      "heroHeading": "Datos Multilingües",
+      "heroSubheading": "Abordando el sesgo y la calidad en los datos de entrenamiento de IA en diferentes idiomas y culturas."
+    },
+    "trustEvaluation": {
+      "name": "Confianza y Evaluación",
+      "description": "Evaluación de modelos, auditorías de sesgo, pruebas de equidad y métricas de IA confiable.",
+      "heroHeading": "Confianza y Evaluación",
+      "heroSubheading": "Evaluación independiente del rendimiento, equidad y cumplimiento de modelos de IA."
+    },
+    "researchIntegrity": {
+      "name": "Integridad en Investigación",
+      "description": "Transparencia en investigación, interpretación de valores p, reproducibilidad y rigor estadístico.",
+      "heroHeading": "Integridad en Investigación",
+      "heroSubheading": "Herramientas y prácticas para mantener la transparencia y reproducibilidad en la investigación."
+    }
+  },
   "servicesHub": {
     "heroHeading": "Nuestros Servicios",
     "heroSubheading": "Ayudamos a organizaciones a construir confianza en sistemas de IA y proteger la integridad académica. Elige el servicio que se ajusta a tus necesidades.",

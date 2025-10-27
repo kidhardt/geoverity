@@ -31,6 +31,38 @@
     "categories": "Categories",
     "allPosts": "All Posts"
   },
+  "insightsCategories": {
+    "academicIntegrity": {
+      "name": "Academic Integrity",
+      "description": "Graduate education, authorized AI tools, and building trust frameworks for student work.",
+      "heroHeading": "Academic Integrity",
+      "heroSubheading": "Exploring how universities maintain trust in student work while adopting AI tools responsibly."
+    },
+    "aiGovernance": {
+      "name": "AI Governance",
+      "description": "Policy frameworks, disclosure requirements, and institutional governance for AI adoption.",
+      "heroHeading": "AI Governance",
+      "heroSubheading": "Building policy frameworks that manage AI risk while enabling innovation."
+    },
+    "multilingualData": {
+      "name": "Multilingual Data",
+      "description": "Dataset bias, language diversity, and ethical considerations in AI training data.",
+      "heroHeading": "Multilingual Data",
+      "heroSubheading": "Addressing bias and quality in AI training data across languages and cultures."
+    },
+    "trustEvaluation": {
+      "name": "Trust and Evaluation",
+      "description": "Model evaluation, bias audits, fairness testing, and trustworthy AI metrics.",
+      "heroHeading": "Trust and Evaluation",
+      "heroSubheading": "Independent evaluation of AI model performance, fairness, and compliance."
+    },
+    "researchIntegrity": {
+      "name": "Research Integrity",
+      "description": "Research transparency, p-value interpretation, reproducibility, and statistical rigor.",
+      "heroHeading": "Research Integrity",
+      "heroSubheading": "Tools and practices for maintaining transparency and reproducibility in research."
+    }
+  },
   "servicesHub": {
     "heroHeading": "Our Services",
     "heroSubheading": "We help organizations build trust in AI systems and protect academic integrity. Choose the service that fits your needs.",

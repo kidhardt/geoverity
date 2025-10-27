@@ -1,0 +1,13 @@
+---
+import BasePageEn from "@/layouts/BasePageEn.astro";
+import { t } from '@/i18n';
+const lang = 'en';
+const pageMeta = { title: "Multilingual Data - Insights - GeoVerity", description: "Dataset bias, language diversity, and ethical considerations in AI training data.", translationStatus: "approved", lastReviewed: new Date().toISOString() };
+---
+<BasePageEn {...pageMeta}>
+<article>
+<section class="hero" aria-labelledby="hero-heading"><h1 id="hero-heading">{t(lang, 'insightsCategories.multilingualData.heroHeading')}</h1><p class="hero-subheading">{t(lang, 'insightsCategories.multilingualData.heroSubheading')}</p></section>
+<section class="posts-section" aria-labelledby="posts-heading"><h2 id="posts-heading">Posts in this Category</h2><p class="no-posts">{t(lang, 'insightsHub.noPosts')}</p></section>
+</article>
+</BasePageEn>
+<style>article{max-width:var(--content-width,70ch);margin-inline:auto}.hero{padding:var(--space-xl) var(--space-md);text-align:center;margin-bottom:var(--space-lg)}.hero h1{font-size:var(--font-size-xxxl);margin-bottom:var(--space-sm)}.hero-subheading{font-size:var(--font-size-lg);max-width:60ch;margin-inline:auto}.posts-section{padding:var(--space-lg) var(--space-md)}.posts-section h2{font-size:var(--font-size-xxl);margin-bottom:var(--space-md)}.no-posts{color:var(--color-text-muted);font-style:italic}</style>
