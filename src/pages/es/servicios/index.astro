@@ -5,7 +5,7 @@ import { t } from '@/i18n';
 const lang = 'es';
 const pageMeta = {
   title: "Nuestros Servicios - GeoVerity",
-  description: "Ayudamos a organizaciones a construir confianza en sistemas de IA y proteger la integridad académica. Elige el servicio que se ajusta a tus necesidades.",
+  description: "[Insertar oración aquí sobre servicios de datos de IA para desarrollo de LLM]",
   translationStatus: "approved",
   lastReviewed: new Date().toISOString()
 };
@@ -22,28 +22,33 @@ const pageMeta = {
       <h2 id="services-heading" class="sr-only">Servicios Disponibles</h2>
 
       <div class="service-card">
-        <h3>
-          <a href="/es/consultoria-educacion-superior/">{t(lang, 'servicesHub.higherEdHeading')}</a>
-        </h3>
-        <p>{t(lang, 'servicesHub.higherEdDesc')}</p>
+        <h3><a href="/es/recopilacion-mejora-datos/">{t(lang, 'servicesHub.dataCollectionHeading')}</a></h3>
+        <p>{t(lang, 'servicesHub.dataCollectionDesc')}</p>
       </div>
 
-      <div class="service-card coming-soon">
-        <h3>{t(lang, 'servicesHub.dataHeading')}</h3>
-        <p>{t(lang, 'servicesHub.dataDesc')}</p>
-        <span class="badge">Próximamente</span>
+      <div class="service-card">
+        <h3><a href="/es/anotacion-etiquetado-datos/">{t(lang, 'servicesHub.dataAnnotationHeading')}</a></h3>
+        <p>{t(lang, 'servicesHub.dataAnnotationDesc')}</p>
       </div>
 
-      <div class="service-card coming-soon">
-        <h3>{t(lang, 'servicesHub.evaluationHeading')}</h3>
-        <p>{t(lang, 'servicesHub.evaluationDesc')}</p>
-        <span class="badge">Próximamente</span>
+      <div class="service-card">
+        <h3><a href="/es/evaluacion-validacion-datos/">{t(lang, 'servicesHub.dataValidationHeading')}</a></h3>
+        <p>{t(lang, 'servicesHub.dataValidationDesc')}</p>
       </div>
 
-      <div class="service-card coming-soon">
-        <h3>{t(lang, 'servicesHub.governanceHeading')}</h3>
-        <p>{t(lang, 'servicesHub.governanceDesc')}</p>
-        <span class="badge">Próximamente</span>
+      <div class="service-card">
+        <h3><a href="/es/entrenamiento-ajuste-modelos/">{t(lang, 'servicesHub.modelTrainingHeading')}</a></h3>
+        <p>{t(lang, 'servicesHub.modelTrainingDesc')}</p>
+      </div>
+
+      <div class="service-card">
+        <h3><a href="/es/evaluacion-comparativa-modelos/">{t(lang, 'servicesHub.benchmarkingHeading')}</a></h3>
+        <p>{t(lang, 'servicesHub.benchmarkingDesc')}</p>
+      </div>
+
+      <div class="service-card">
+        <h3><a href="/es/plataforma-gestion-datos-ia/">{t(lang, 'servicesHub.platformHeading')}</a></h3>
+        <p>{t(lang, 'servicesHub.platformDesc')}</p>
       </div>
     </section>
   </article>

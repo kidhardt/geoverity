@@ -87,15 +87,57 @@
   },
   "servicesHub": {
     "heroHeading": "Nuestros Servicios",
-    "heroSubheading": "Ayudamos a organizaciones a construir confianza en sistemas de IA y proteger la integridad académica. Elige el servicio que se ajusta a tus necesidades.",
-    "higherEdHeading": "Consultoría para Educación Superior",
-    "higherEdDesc": "Las universidades mantienen la integridad académica en entornos con IA. Capacitamos profesores, construimos políticas y brindamos apoyo en implementación. Tu institución se adapta a la IA mientras cumple con los estándares de acreditación.",
-    "dataHeading": "Datos de Entrenamiento de IA Multilingües",
-    "dataDesc": "Datos de entrenamiento verificados en más de 120 idiomas. Auditamos conjuntos de datos para detectar sesgos antes del despliegue. Construyes sistemas de IA que funcionan equitativamente en todas las culturas.",
-    "evaluationHeading": "Evaluación de IA Confiable y Cumplimiento",
-    "evaluationDesc": "Evaluación independiente del rendimiento y cumplimiento de modelos de IA. Probamos modelos contra requisitos regulatorios. Despliegas con confianza y cumples con los estándares de gobernanza.",
-    "governanceHeading": "Marcos de Gobernanza de IA",
-    "governanceDesc": "Marcos de políticas para la adopción responsable de IA. Diseñamos sistemas de gobernanza que se ajustan a tu organización. Gestionas el riesgo de IA mientras permites la innovación."
+    "heroSubheading": "[Insertar oración aquí sobre servicios de datos de IA para desarrollo de LLM]",
+    "dataCollectionHeading": "Recopilación y Mejora de Datos",
+    "dataCollectionDesc": "[Insertar oración aquí sobre curación de conjuntos de datos multilingües y generación de datos sintéticos]",
+    "dataAnnotationHeading": "Anotación y Etiquetado de Datos",
+    "dataAnnotationDesc": "[Insertar oración aquí sobre organización y etiquetado de datos para preparación de IA]",
+    "dataValidationHeading": "Evaluación y Validación de Datos",
+    "dataValidationDesc": "[Insertar oración aquí sobre medición de conjuntos de datos para reducir sesgos y mejorar precisión]",
+    "modelTrainingHeading": "Entrenamiento y Ajuste de Modelos",
+    "modelTrainingDesc": "[Insertar oración aquí sobre refinamiento de modelos preentrenados con conjuntos de datos personalizados]",
+    "benchmarkingHeading": "Evaluación Comparativa y Evaluación de Modelos",
+    "benchmarkingDesc": "[Insertar oración aquí sobre evaluación estructurada y evaluación impulsada por expertos]",
+    "platformHeading": "Plataforma de Gestión de Datos de IA",
+    "platformDesc": "[Insertar oración aquí sobre sistema de pipeline de datos integrado de extremo a extremo]"
+  },
+  "services": {
+    "dataCollection": {
+      "heroHeading": "Recopilación y Mejora de Datos",
+      "heroSubheading": "[Insertar oración aquí sobre servicios de recopilación de datos]",
+      "overviewHeading": "Resumen",
+      "overviewContent": "[Insertar contenido aquí sobre curación y obtención de datos multilingües sin procesar incluyendo texto, audio, imagen en más de 120 idiomas y dialectos regionales, más generación de datos sintéticos]"
+    },
+    "dataAnnotation": {
+      "heroHeading": "Anotación y Etiquetado de Datos",
+      "heroSubheading": "[Insertar oración aquí sobre servicios de anotación]",
+      "overviewHeading": "Resumen",
+      "overviewContent": "[Insertar contenido aquí sobre organización y etiquetado de datos para preparación de IA utilizando anotadores humanos y herramientas asistidas por IA con revisión multi-paso]"
+    },
+    "dataValidation": {
+      "heroHeading": "Evaluación y Validación de Datos",
+      "heroSubheading": "[Insertar oración aquí sobre servicios de validación]",
+      "overviewHeading": "Resumen",
+      "overviewContent": "[Insertar contenido aquí sobre medición y validación de conjuntos de datos para reducir sesgos, mejorar precisión y asegurar calidad de nivel empresarial]"
+    },
+    "modelTraining": {
+      "heroHeading": "Entrenamiento y Ajuste de Modelos",
+      "heroSubheading": "[Insertar oración aquí sobre servicios de entrenamiento de modelos]",
+      "overviewHeading": "Resumen",
+      "overviewContent": "[Insertar contenido aquí sobre refinamiento de LLM preentrenados con conjuntos de datos personalizados multilingües y específicos de dominio]"
+    },
+    "benchmarking": {
+      "heroHeading": "Evaluación Comparativa y Evaluación de Modelos",
+      "heroSubheading": "[Insertar oración aquí sobre servicios de evaluación comparativa]",
+      "overviewHeading": "Resumen",
+      "overviewContent": "[Insertar contenido aquí sobre conjuntos de datos de evaluación estructurada y evaluación de modelos impulsada por expertos en idiomas y dominios]"
+    },
+    "platform": {
+      "heroHeading": "Plataforma de Gestión de Datos de IA",
+      "heroSubheading": "[Insertar oración aquí sobre servicios de plataforma]",
+      "overviewHeading": "Resumen",
+      "overviewContent": "[Insertar contenido aquí sobre pipeline integrado de extremo a extremo desde recopilación hasta anotación hasta evaluación hasta ajuste]"
+    }
   },
   "higherEd": {
     "heroHeading": "Consultoría para Educación Superior",

@@ -87,15 +87,57 @@
   },
   "servicesHub": {
     "heroHeading": "Our Services",
-    "heroSubheading": "We help organizations build trust in AI systems and protect academic integrity. Choose the service that fits your needs.",
-    "higherEdHeading": "Higher Education Consulting",
-    "higherEdDesc": "Universities maintain academic integrity in AI environments. We train faculty, build policies, and provide implementation support. Your institution adapts to AI while meeting accreditation standards.",
-    "dataHeading": "Multilingual AI Training Data",
-    "dataDesc": "Verified training data across 120+ languages. We audit datasets to surface bias before deployment. You build AI systems that work fairly across cultures.",
-    "evaluationHeading": "Trustworthy AI Evaluation & Compliance",
-    "evaluationDesc": "Independent evaluation of AI model performance and compliance. We test models against regulatory requirements. You deploy with confidence and meet governance standards.",
-    "governanceHeading": "AI Governance Frameworks",
-    "governanceDesc": "Policy frameworks for responsible AI adoption. We design governance systems that fit your organization. You manage AI risk while enabling innovation."
+    "heroSubheading": "[Insert sentence here about AI data services for LLM development]",
+    "dataCollectionHeading": "Data Collection & Enhancement",
+    "dataCollectionDesc": "[Insert sentence here about curating multilingual datasets and synthetic data generation]",
+    "dataAnnotationHeading": "Data Annotation & Labeling",
+    "dataAnnotationDesc": "[Insert sentence here about organizing and tagging data for AI readiness]",
+    "dataValidationHeading": "Data Evaluation & Validation",
+    "dataValidationDesc": "[Insert sentence here about measuring datasets to reduce bias and improve accuracy]",
+    "modelTrainingHeading": "Model Training & Fine-Tuning",
+    "modelTrainingDesc": "[Insert sentence here about refining pre-trained models with custom datasets]",
+    "benchmarkingHeading": "Benchmarking & Model Evaluation",
+    "benchmarkingDesc": "[Insert sentence here about structured benchmarking and expert-driven evaluation]",
+    "platformHeading": "AI Data Management Platform",
+    "platformDesc": "[Insert sentence here about integrated end-to-end data pipeline system]"
+  },
+  "services": {
+    "dataCollection": {
+      "heroHeading": "Data Collection & Enhancement",
+      "heroSubheading": "[Insert sentence here about data collection services]",
+      "overviewHeading": "Overview",
+      "overviewContent": "[Insert content here about curating and sourcing raw multilingual data including text, audio, image across 120+ languages and regional dialects, plus synthetic data generation]"
+    },
+    "dataAnnotation": {
+      "heroHeading": "Data Annotation & Labeling",
+      "heroSubheading": "[Insert sentence here about annotation services]",
+      "overviewHeading": "Overview",
+      "overviewContent": "[Insert content here about organizing and tagging data for AI readiness using human annotators and AI-assisted tools with multi-pass review]"
+    },
+    "dataValidation": {
+      "heroHeading": "Data Evaluation & Validation",
+      "heroSubheading": "[Insert sentence here about validation services]",
+      "overviewHeading": "Overview",
+      "overviewContent": "[Insert content here about measuring and validating datasets to reduce bias, improve accuracy, and ensure enterprise-grade quality]"
+    },
+    "modelTraining": {
+      "heroHeading": "Model Training & Fine-Tuning",
+      "heroSubheading": "[Insert sentence here about model training services]",
+      "overviewHeading": "Overview",
+      "overviewContent": "[Insert content here about refining pre-trained LLMs with custom-curated multilingual and domain-specific datasets]"
+    },
+    "benchmarking": {
+      "heroHeading": "Benchmarking & Model Evaluation",
+      "heroSubheading": "[Insert sentence here about benchmarking services]",
+      "overviewHeading": "Overview",
+      "overviewContent": "[Insert content here about structured benchmarking datasets and expert-driven model evaluation across languages and domains]"
+    },
+    "platform": {
+      "heroHeading": "AI Data Management Platform",
+      "heroSubheading": "[Insert sentence here about platform services]",
+      "overviewHeading": "Overview",
+      "overviewContent": "[Insert content here about integrated end-to-end pipeline from collection to annotation to evaluation to fine-tuning]"
+    }
   },
   "higherEd": {
     "heroHeading": "Higher Education Consulting",
