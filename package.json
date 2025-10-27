@@ -21,7 +21,8 @@
     "validate:localization": "node scripts/validate_localization.js",
     "validate:accessibility": "node scripts/accessibility_scan.js",
     "validate:governance": "node scripts/data_governance_scan.js",
-    "validate:all": "npm run validate:localization && npm run validate:accessibility && npm run validate:governance",
+    "validate:building-pages": "node scripts/validate_building_pages_review.js",
+    "validate:all": "npm run validate:localization && npm run validate:accessibility && npm run validate:governance && npm run validate:building-pages",
     "generate:sitemap": "node scripts/generate_sitemap.js",
     "generate:categories": "node scripts/generate_categories.js",
     "generate:all": "npm run generate:sitemap && npm run generate:categories"
