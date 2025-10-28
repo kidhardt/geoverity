@@ -38,6 +38,19 @@ const lang = 'es';
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CLS Prevention: Inline critical CSS dimensions to prevent layout shift -->
+    <style>
+      /* Critical layout styles loaded inline to prevent CLS */
+      body { margin: 0; font-family: system-ui, sans-serif; }
+      header[role="banner"] { min-height: 64px; }
+      main[role="main"] { min-height: 60vh; }
+      footer[role="contentinfo"] { min-height: 120px; }
+      img { max-width: 100%; height: auto; display: block; }
+      .hero, section.hero { min-height: 320px; }
+      .content-section { min-height: 200px; }
+    </style>
+
     <title>{title}</title>
     <meta name="description" content={description} />
 
