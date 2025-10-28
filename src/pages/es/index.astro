@@ -1,6 +1,7 @@
 ---
 /**
  * Homepage - Spanish (/es/)
+import '@/styles/pages/home.css';
  * Building-pages v2.0.0 compliant
  * Languaging: B1-B2 register (register parity with English)
  * Checking-crappy-writing: PASS (register parity maintained)
@@ -51,88 +52,3 @@ const pageMeta = {
   </section>
 </BasePageEs>
 
-<style>
-  /* Hero Section - Mobile-first */
-  .hero {
-    background-color: var(--color-background-alt);
-    padding: var(--space-2xl) var(--space-md);
-    text-align: center;
-  }
-
-  .hero-container {
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-  }
-
-  .hero-heading {
-    font-size: clamp(1.75rem, 5vw, 2.5rem);
-    margin-bottom: var(--space-lg);
-    line-height: 1.2;
-  }
-
-  .hero-subheading {
-    font-size: clamp(1rem, 3vw, 1.25rem);
-    margin-bottom: var(--space-xl);
-    line-height: 1.6;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .cta-button {
-    display: inline-block;
-    padding: var(--tap-target-padding) var(--space-xl);
-    min-height: var(--tap-target-min);
-    background-color: var(--color-link);
-    color: var(--color-text-inverse);
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    transition: background-color 0.2s ease;
-  }
-
-  .cta-button:hover,
-  .cta-button:focus {
-    background-color: var(--color-link-hover);
-  }
-
-  /* Respect reduced motion */
-  @media (prefers-reduced-motion: reduce) {
-    .cta-button {
-      transition: none;
-    }
-  }
-
-  /* Mission Section - Mobile-first */
-  .mission {
-    padding: var(--space-2xl) var(--space-md);
-  }
-
-  .mission-container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .mission-heading {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    margin-bottom: var(--space-lg);
-    text-align: center;
-  }
-
-  .mission-text {
-    font-size: clamp(1rem, 2.5vw, 1.125rem);
-    line-height: 1.8;
-    text-align: center;
-  }
-
-  /* Desktop enhancements - min-width progressive enhancement */
-  @media (min-width: 768px) {
-    .hero {
-      padding: var(--space-2xl) var(--space-xl);
-    }
-
-    .mission {
-      padding: var(--space-2xl) var(--space-xl);
-    }
-  }
-</style>

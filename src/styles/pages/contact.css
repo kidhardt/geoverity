@@ -1,0 +1,65 @@
+/**
+ * Contact Page Styles (contact/index.astro)
+ * Extracted from inline <style> block for HTML hygiene
+ * Building-pages v2.0.0 compliant
+ */
+
+article {
+  max-width: var(--content-width, 70ch);
+  margin-inline: auto;
+}
+
+/* CLS Prevention: Reserve space for hero section */
+.hero {
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  min-height: 320px;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 500px;
+  }
+}
+
+.hero h1 {
+  font-size: var(--font-size-xxxl);
+  margin-bottom: var(--space-sm);
+}
+
+.hero-subheading {
+  font-size: var(--font-size-lg);
+  max-width: 60ch;
+  margin-inline: auto;
+}
+
+/* CLS Prevention: Reserve space for form section */
+.contact-form-section {
+  padding: var(--space-lg) var(--space-md);
+  min-height: 300px;
+}
+
+.contact-form-section h2 {
+  font-size: var(--font-size-xxl);
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+.placeholder {
+  padding: var(--space-xl);
+  text-align: center;
+  background-color: var(--color-background-secondary, #f5f5f5);
+  border-radius: var(--radius-md);
+}
+
+.placeholder p {
+  margin: 0;
+  font-size: var(--font-size-lg);
+}

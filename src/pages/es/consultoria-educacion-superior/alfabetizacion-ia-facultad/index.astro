@@ -1,6 +1,7 @@
 ---
 import BasePageEs from "@/layouts/BasePageEs.astro";
 import { t } from '@/i18n';
+import '@/styles/pages/higher-ed.css';
 const lang = 'es';
 const pageMeta = { title: "Programas de Alfabetización en IA para Facultad - GeoVerity", description: "Capacita a la facultad para evaluar el trabajo estudiantil de manera efectiva en entornos de IA.", translationStatus: "approved", lastReviewed: new Date().toISOString() };
 ---
@@ -10,4 +11,3 @@ const pageMeta = { title: "Programas de Alfabetización en IA para Facultad - Ge
 <section class="content-section" aria-labelledby="content-heading"><h2 id="content-heading" class="sr-only">Resumen</h2><p>{t(lang, 'higherEdSpokes.facultyLiteracy.contentPara')}</p></section>
 </article>
 </BasePageEs>
-<style>article{max-width:var(--content-width,70ch);margin-inline:auto}.hero{padding:var(--space-xl) var(--space-md);text-align:center;margin-bottom:var(--space-lg)}.hero h1{font-size:var(--font-size-xxxl);margin-bottom:var(--space-sm)}.hero-subheading{font-size:var(--font-size-lg);max-width:60ch;margin-inline:auto}.content-section{padding:var(--space-lg) var(--space-md);margin-bottom:var(--space-md)}.content-section h2{font-size:var(--font-size-xxl);margin-bottom:var(--space-md)}.content-section p{margin-bottom:var(--space-sm);line-height:1.6}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}</style>

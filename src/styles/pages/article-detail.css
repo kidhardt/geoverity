@@ -1,0 +1,42 @@
+/**
+ * Article Detail Page Styles
+ * Extracted from inline <style> blocks for HTML hygiene
+ * Used by: AI service details, specialty pages, insight posts (EN/ES)
+ * Building-pages v2.0.0 compliant
+ */
+
+article {
+  max-width: var(--content-width, 70ch);
+  margin-inline: auto;
+}
+
+.hero {
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.hero h1 {
+  font-size: var(--font-size-xxxl);
+  margin-bottom: var(--space-sm);
+}
+
+.hero-subheading {
+  font-size: var(--font-size-lg);
+  max-width: 60ch;
+  margin-inline: auto;
+}
+
+.content-section {
+  padding: var(--space-lg) var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.content-section h2 {
+  font-size: var(--font-size-xxl);
+  margin-bottom: var(--space-md);
+}
+
+.content-section p {
+  line-height: 1.6;
+}
