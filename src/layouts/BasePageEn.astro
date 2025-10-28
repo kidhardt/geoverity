@@ -6,7 +6,7 @@
  */
 import { t } from '@/i18n';
 import '@/styles/global.css';
-import '@/styles/layouts/base-page.css';
+// Note: base-page.css loaded via <link> tag in head (public/styles/layouts/base-page.css)
 
 interface Props {
   title: string;
@@ -54,8 +54,8 @@ const lang = 'en';
     <title>{title}</title>
     <meta name="description" content={description} />
 
-    <!-- Preload layout CSS for faster parse -->
-    <link rel="preload" href="/styles/layouts/base-page.css" as="style">
+    <!-- Layout CSS - loaded from public/ to prevent bundling/FOUC -->
+    <link rel="stylesheet" href="/styles/layouts/base-page.css">
 
     <!-- Canonical and alternate links for SEO/i18n -->
     <link rel="canonical" href={canonical} />
