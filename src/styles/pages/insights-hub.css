@@ -1,0 +1,87 @@
+/**
+ * Insights Hub Styles (insights/index.astro)
+ * Extracted from inline <style> block for HTML hygiene
+ * Building-pages v2.0.0 compliant
+ */
+
+/* CLS Prevention: Reserve space for hero section */
+.insights-hero {
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  min-height: 320px;
+}
+
+@media (min-width: 768px) {
+  .insights-hero {
+    min-height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .insights-hero {
+    min-height: 500px;
+  }
+}
+
+.insights-hero h1 {
+  font-size: var(--font-size-xxxl);
+  margin-bottom: var(--space-sm);
+}
+
+.insights-hero p {
+  font-size: var(--font-size-lg);
+  max-width: 60ch;
+  margin-inline: auto;
+}
+
+/* CLS Prevention: Reserve space for content section */
+.insights-content {
+  padding: var(--space-lg) var(--space-md);
+  max-width: var(--content-width);
+  margin-inline: auto;
+  min-height: 200px;
+}
+
+.no-posts {
+  text-align: center;
+  color: var(--color-text-secondary);
+  padding: var(--space-xl);
+}
+
+.posts-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.posts-list article {
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.posts-list h3 {
+  margin-bottom: var(--space-xs);
+}
+
+.posts-list a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.posts-list a:hover {
+  text-decoration: underline;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
