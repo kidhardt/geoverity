@@ -37,10 +37,24 @@ const pageMeta = {
     margin-inline: auto;
   }
 
+  /* CLS Prevention: Reserve space for hero section */
   .hero {
     padding: var(--space-xl) var(--space-md);
     text-align: center;
     margin-bottom: var(--space-lg);
+    min-height: 320px;
+  }
+
+  @media (min-width: 768px) {
+    .hero {
+      min-height: 400px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero {
+      min-height: 500px;
+    }
   }
 
   .hero h1 {
@@ -54,8 +68,10 @@ const pageMeta = {
     margin-inline: auto;
   }
 
+  /* CLS Prevention: Reserve space for form section */
   .contact-form-section {
     padding: var(--space-lg) var(--space-md);
+    min-height: 300px;
   }
 
   .contact-form-section h2 {

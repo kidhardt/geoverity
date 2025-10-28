@@ -44,9 +44,23 @@ const posts: any[] = [];
 </BasePageEn>
 
 <style>
+  /* CLS Prevention: Reserve space for hero section */
   .insights-hero {
     padding: var(--space-lg) var(--space-md);
     text-align: center;
+    min-height: 320px;
+  }
+
+  @media (min-width: 768px) {
+    .insights-hero {
+      min-height: 400px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .insights-hero {
+      min-height: 500px;
+    }
   }
 
   .insights-hero h1 {
@@ -60,10 +74,12 @@ const posts: any[] = [];
     margin-inline: auto;
   }
 
+  /* CLS Prevention: Reserve space for content section */
   .insights-content {
     padding: var(--space-lg) var(--space-md);
     max-width: var(--content-width);
     margin-inline: auto;
+    min-height: 200px;
   }
 
   .no-posts {
