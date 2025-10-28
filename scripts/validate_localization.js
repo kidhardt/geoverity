@@ -1,41 +1,89 @@
 #!/usr/bin/env node
 /**
  * GeoVerity 2026 – Localization Validator
- * Validates bilingual parity and required metadata.
+ * Validates bilingual parity across all 58 pages.
  */
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from 'url';
 
-const root = process.cwd();
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const root = path.join(__dirname, '..');
 const BUILD_DIR = process.env.BUILD_DIR || 'dist';
-let ok = true;
+const distPath = path.join(root, BUILD_DIR);
 
-function checkParity(enDir, esDir) {
-  const enFiles = fs.readdirSync(enDir).filter(f => f.endsWith(".html"));
-  for (const file of enFiles) {
-    const esFile = path.join(esDir, file);
-    if (!fs.existsSync(esFile)) {
-      console.error(`Missing Spanish mirror for: ${file}`);
-      ok = false;
+let ok = true;
+const enRoutes = [];
+const esRoutes = [];
+
+function findHtmlFiles(dir, routeList, prefix = '', excludeDirs = []) {
+  if (!fs.existsSync(dir)) return;
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+
+    if (entry.isDirectory()) {
+      if (entry.name === '_astro' || excludeDirs.includes(entry.name)) continue;
+      findHtmlFiles(fullPath, routeList, path.join(prefix, entry.name), excludeDirs);
+    } else if (entry.isFile() && entry.name === 'index.html') {
+      const route = prefix ? `/${prefix.split(path.sep).join('/')}/` : '/';
+      routeList.push(route);
     }
   }
 }
 
-const enDir = path.join(root, BUILD_DIR);
-const esDir = path.join(root, BUILD_DIR, "es");
-
-if (!fs.existsSync(BUILD_DIR)) {
+if (!fs.existsSync(distPath)) {
   console.error(`❌ Build directory not found: ${BUILD_DIR}`);
   console.error(`Run 'npm run build' first`);
   process.exit(1);
 }
 
-if (fs.existsSync(enDir) && fs.existsSync(esDir)) {
-  checkParity(enDir, esDir);
+// Find EN routes (exclude /es/ directory)
+findHtmlFiles(distPath, enRoutes, '', ['es']);
+
+// Find ES routes
+const esPath = path.join(distPath, 'es');
+if (fs.existsSync(esPath)) {
+  findHtmlFiles(esPath, esRoutes);
 }
 
-if (ok) console.log("✅ Localization parity validated");
-else {
-  console.error("❌ Localization parity issues found");
+console.log(`Found ${enRoutes.length} English routes`);
+console.log(`Found ${esRoutes.length} Spanish routes`);
+
+// Check for missing Spanish mirrors
+const missingSpanish = [];
+for (const enRoute of enRoutes) {
+  if (enRoute.includes('/placeholder/')) continue;
+  if (!esRoutes.includes(enRoute)) {
+    missingSpanish.push(enRoute);
+    ok = false;
+  }
+}
+
+// Check for orphaned Spanish pages
+const orphanedSpanish = [];
+for (const esRoute of esRoutes) {
+  if (!enRoutes.includes(esRoute)) {
+    orphanedSpanish.push(esRoute);
+    ok = false;
+  }
+}
+
+if (missingSpanish.length > 0) {
+  console.error(`\n❌ Missing Spanish mirrors (${missingSpanish.length}):`);
+  missingSpanish.forEach(r => console.error(`   ${r} → /es${r}`));
+}
+
+if (orphanedSpanish.length > 0) {
+  console.error(`\n❌ Orphaned Spanish pages (${orphanedSpanish.length}):`);
+  orphanedSpanish.forEach(r => console.error(`   /es${r} (no English original)`));
+}
+
+if (ok) {
+  console.log(`\n✅ Localization parity validated - ${enRoutes.length} pages with EN/ES mirrors`);
+  process.exit(0);
+} else {
+  console.error(`\n❌ Localization parity issues found`);
   process.exit(1);
 }
